@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: "Arsenal";
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    --black: #1c1917;
+    --green: #93b256;
+    --text-primary: white;
+    --text-secondary: rgb(201, 201, 201);
+
+    --app-width: 1200px;
+    color: rgb(255, 255, 255);
+}
+
+/* a {
+    font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+    color: #535bf2;
+    } */
+
+body {
+    display: flex;
+    place-items: center;
+    background-color: var(--black);
+}
