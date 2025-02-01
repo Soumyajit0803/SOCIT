@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.ant-btn-primary{
+    all: unset;
+    margin: 8px;
+}
+.Footer-Frame{
+    position: absolute;
+    bottom: 0;
+    font-family: Arsenal;
+    color: white;
+    height: 50vh;
+    width: 100%;
+    background-color: #1C1917;
+    padding: 0px 30px;
+    padding-bottom: 20px;
+
+}
+.Footer-Frame .Footer{
+    /* border: ; */
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #93B256;
+    height: 100%;
+    gap: 85px;
+}
+/* .Footer-Frame .Footer .Upper{
+    display: flex;
+    flex: 107;
+    border-bottom: 3px solid #93B256;
+} */
+.Footer-Frame .Footer .Lower{
+    flex: 100;
+    display: flex;
+    /* border-top: 3px solid #93B256; */
+}
+
+/* .Footer-Frame .Footer .Upper .Left-Box{
+    flex: 3;
+    padding: 20px 30px;
+    font-size: 40px;
+}
+.Footer-Frame .Footer .Upper .Right-Box{
+    border-left: 3px solid #93B256;
+    flex: 5;
+}
+.Footer-Frame .Footer .Upper .Right-Box{
+    .Mail{
+        height: 15%;
+        border-bottom: 3px solid #93B256
+    }
+    .Lucky{
+        height: 75%;
+        border-bottom: 3px solid #93B256
+
+    }
+    .Spacer{
+        height: 10%;
+        border-bottom: 3px solid #93B256 
+
+    }
+}  */
+
+.Footer-Frame .Footer .Lower .Left-Box{
+    flex: 2;
+    border-right: 3px solid #93B256;
+    padding: 30px 24px;
+    font-size: 20px;
+    .Title{
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+.Footer-Frame .Footer .Lower .Mid-Box{
+    flex: 9;
+    border-right: 3px solid #93B256;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    .Image{
+        margin: auto;
+        /* border: 1px solid white; */
+        flex: 1;
+        max-height: 80%;
+        width: 100%;
+        /* margin-top: 10%; */
+        background-image: url(/assets/socit-green.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .Text{
+        display: flex;
+        width: 100%;
+        /* border: 1px solid white; */
+        padding: 20px;
+        padding-bottom: 0;
+        font-size: 22.5px;
+        color: rgba(256,256,256, 0.75);
+        .Left{
+            padding-top: 10px;
+            flex: 1;
+            /* border: 1px solid white; */
+        }
+        .Right{
+            flex: 1;
+            text-align: right;
+            font-size: 30px;
+            /* border: 1px solid white; */
+
+        }
+    }
+    
+}
+
+.Footer-Frame .Footer .Lower .Right-Box{
+    flex: 2;
+    padding-left: 24px;
+    font-size: 24px;
+
+    .Links{
+        margin-top: 30px;
+        .Title{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .item{
+            margin-top: -8px;
+
+        }
+    }
+    .Devs{
+        margin-top: 20px;
+        .Title{
+            font-size: 27px;
+            font-weight: bold;
+        }
+        .item{
+            margin-top: -8px;
+        }
+    }
+}
+/*
+.Footer-Frame .Footer .Left-Box .Text-Area{
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.Footer-Frame .Footer .Right-Box{
+    border-left: 3px solid #93B256;
+    
+    flex: 2;
+}
+.Footer-Frame .Footer .Mid-Box{
+    /* border: ; */
+    /* flex: 9; */
+/* } */ 
