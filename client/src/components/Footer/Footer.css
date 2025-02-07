@@ -1,157 +1,213 @@
 @import url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-.ant-btn-primary{
+
+.ant-btn-primary {
     all: unset;
     margin: 8px;
 }
-.Footer-Frame{
-    position: absolute;
+
+.Footer-Frame {
+    /* position: absolute; */
     bottom: 0;
     font-family: Arsenal;
     color: white;
-    height: 50vh;
+    height: 500px;
     width: 100%;
     background-color: #1C1917;
-    padding: 0px 30px;
-    padding-bottom: 20px;
-
+    padding: 0 30px 20px;
 }
-.Footer-Frame .Footer{
-    /* border: ; */
+
+.Footer-Frame .Footer {
     display: flex;
-    flex-direction: column;
     border: 3px solid #93B256;
     height: 100%;
     gap: 85px;
 }
-/* .Footer-Frame .Footer .Upper{
-    display: flex;
-    flex: 107;
-    border-bottom: 3px solid #93B256;
-} */
-.Footer-Frame .Footer .Lower{
+
+.Footer-Frame .Footer .Lower {
     flex: 100;
     display: flex;
-    /* border-top: 3px solid #93B256; */
+    position: relative;
 }
 
-/* .Footer-Frame .Footer .Upper .Left-Box{
+.Footer-Frame .Footer .Lower .Left-Box {
     flex: 3;
-    padding: 20px 30px;
-    font-size: 40px;
-}
-.Footer-Frame .Footer .Upper .Right-Box{
-    border-left: 3px solid #93B256;
-    flex: 5;
-}
-.Footer-Frame .Footer .Upper .Right-Box{
-    .Mail{
-        height: 15%;
-        border-bottom: 3px solid #93B256
-    }
-    .Lucky{
-        height: 75%;
-        border-bottom: 3px solid #93B256
-
-    }
-    .Spacer{
-        height: 10%;
-        border-bottom: 3px solid #93B256 
-
-    }
-}  */
-
-.Footer-Frame .Footer .Lower .Left-Box{
-    flex: 2;
     border-right: 3px solid #93B256;
-    padding: 30px 24px;
-    font-size: 20px;
-    .Title{
-        font-size: 30px;
-        font-weight: bold;
-    }
+    padding: 30px 24px 30px 0;
+    font-size: min(4vw, 20px);
 }
-.Footer-Frame .Footer .Lower .Mid-Box{
-    flex: 9;
+
+.Footer-Frame .Footer .Lower .Left-Box .Title {
+    position: relative;
+    font-size: min(6vw, 30px);
+    padding-left: 24px;
+    font-weight: bold;
+    background-color: #1C1917;
+}
+
+.Footer-Frame .Footer .Lower .Left-Box .address {
+    padding-left: 24px;
+    background-color: #1C1917;
+}
+
+.Footer-Frame .Footer .Lower .Mid-Box {
+    flex: 7;
     border-right: 3px solid #93B256;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
-    .Image{
-        margin: auto;
-        /* border: 1px solid white; */
-        flex: 1;
-        max-height: 80%;
-        width: 100%;
-        /* margin-top: 10%; */
+}
+
+.Footer-Frame .Footer .Lower .Mid-Box .Image {
+    margin: auto;
+    flex: 1;
+    max-height: 80%;
+    width: 100%;
+    background-image: url(/assets/socit-green.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Footer-Frame .Footer .Lower .Mid-Box .Text {
+    display: flex;
+    width: 100%;
+    color: rgba(256, 256, 256, 0.75);
+}
+
+.Footer-Frame .Footer .Lower .Mid-Box .Text .Left {
+    margin-bottom: 0px;
+    flex: 1;
+    padding-left: 20px;
+    padding-top: 14px;
+    font-size: min(4vw, 22.5px);
+
+}
+
+.Footer-Frame .Footer .Lower .Mid-Box .Text .Right {
+    margin-bottom: 5px;
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+    font-size: min(5vw, 30px);
+}
+
+.Footer-Frame .Footer .Lower .Right-Box {
+    flex: 3;
+    padding-left: 24px;
+    font-size: min(4vw, 24px);
+}
+
+.Footer-Frame .Footer .Lower .Right-Box .Links {
+    margin-top: 30px;
+}
+
+.Footer-Frame .Footer .Lower .Right-Box .Links .item {
+    margin-top: -6px;
+}
+
+.Footer-Frame .Footer .Lower .Right-Box .Links .Title {
+    margin-bottom: 10px;
+    font-size: min(5vw, 30px);
+    font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+    .Footer-Frame {
+        height: fit-content;
+    }
+
+    .Footer-Frame .Footer .Lower .Mid-Box .Text {
+        flex-direction: column;
+
+        .Right,
+        .Left {
+            text-align: center;
+            padding: 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #93B256;
+
+        }
+
+        .Left {
+            order: 2;
+            border: 0;
+            padding-bottom: 15px;
+            padding-top: 10px;
+        }
+    }
+
+    .Footer-Frame .Footer .Lower {
+        flex-direction: column;
+    }
+
+    .Footer-Frame .Footer .Lower .Left-Box .Logo_mob {
+        visibility: visible;
         background-image: url(/assets/socit-green.webp);
         background-size: contain;
+        width: 100%;
+
+        margin: auto;
         background-repeat: no-repeat;
+        height: 300px;
+        border-bottom: 3px solid #93B256;
         background-position: center;
     }
-    .Text{
+
+    .Footer-Frame .Footer .Lower .Left-Box {
+        order: 1;
+        border: 0;
+        padding: 0;
+
+        .mob_middle {
+            display: flex;
+            padding-top: 24px;
+            padding-bottom: 80px;
+            border-bottom: 3px solid #93B256;
+            .wrapper_left {
+                flex: 3;
+            }
+
+            .wrapper_right {
+                flex: 2;
+            }
+        }
+
+    }
+
+    .Footer-Frame .Footer .Lower .Right-Box {
+        order: 2;
+    }
+
+    .Footer-Frame .Footer .Lower .Mid-Box {
+        order: 3;
+        border: 0;
+    }
+
+    .Footer-Frame .Footer .Lower .Mid-Box .Image {
+        visibility: hidden;
+    }
+
+    .Footer-Frame .Footer .Lower .Right-Box .wrapper {
         display: flex;
-        width: 100%;
-        /* border: 1px solid white; */
-        padding: 20px;
-        padding-bottom: 0;
-        font-size: 22.5px;
-        color: rgba(256,256,256, 0.75);
-        .Left{
-            padding-top: 10px;
-            flex: 1;
-            /* border: 1px solid white; */
-        }
-        .Right{
-            flex: 1;
+        padding-right: 24px;
+    }
+
+    .Footer-Frame .Footer .Lower .Right-Box .wrapper .Links {
+        flex: 1;
+    }
+
+    .Footer-Frame .Footer .Lower .Right-Box .wrapper {
+        #shift_right {
             text-align: right;
-            font-size: 30px;
-            /* border: 1px solid white; */
-
-        }
-    }
-    
-}
-
-.Footer-Frame .Footer .Lower .Right-Box{
-    flex: 2;
-    padding-left: 24px;
-    font-size: 24px;
-
-    .Links{
-        margin-top: 30px;
-        .Title{
-            font-size: 30px;
-            font-weight: bold;
-        }
-        .item{
-            margin-top: -8px;
-
-        }
-    }
-    .Devs{
-        margin-top: 20px;
-        .Title{
-            font-size: 27px;
-            font-weight: bold;
-        }
-        .item{
-            margin-top: -8px;
         }
     }
 }
-/*
-.Footer-Frame .Footer .Left-Box .Text-Area{
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
+
+@media screen and (max-width: 580px) {
+    .Footer-Frame .Footer .Lower .Left-Box .Logo_mob {
+
+        height: 200px;
+
+    }
 }
-.Footer-Frame .Footer .Right-Box{
-    border-left: 3px solid #93B256;
-    
-    flex: 2;
-}
-.Footer-Frame .Footer .Mid-Box{
-    /* border: ; */
-    /* flex: 9; */
-/* } */ 
