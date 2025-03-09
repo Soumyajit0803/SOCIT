@@ -6,22 +6,18 @@
 }
 
 .Footer-Frame {
-    /* position: absolute; */
-    /* bottom: 0; */
     font-family: "Arsenal";
     color: white;
     height: 350px;
-    /* width: 100%; */
     background-color: #1C1917;
     margin: var(--appmargin);;
-    /* padding: 0.5rem; */
 }
 
 .Footer-Frame .Footer {
     display: flex;
     border: 2px solid #93B256;
+    border-top: 0;
     height: 100%;
-    /* gap: 85px; */
 }
 
 .Footer-Frame .Footer .Lower {
@@ -33,7 +29,6 @@
 .Footer-Frame .Footer .Lower .Left-Box {
     flex: 3;
     border-right: 2px solid #93B256;
-    /* padding: 30px 24px 30px 0; */
     padding: 1rem;
     font-size: min(3.8vw, 16px);
 }
@@ -41,18 +36,16 @@
 .Footer-Frame .Footer .Lower .Left-Box .Title {
     position: relative;
     font-size: min(6vw, 25px);
-    /* padding-left: 24px; */
     font-weight: bold;
     background-color: #1C1917;
 }
 
 .Footer-Frame .Footer .Lower .Left-Box .address {
-    /* padding-left: 24px; */
     background-color: #1C1917;
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box {
-    flex: 7;
+    flex: 9;
     border-right: 2px solid #93B256;
     display: flex;
     flex-direction: column;
@@ -78,7 +71,6 @@
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box .Text .Left {
-    /* margin-bottom: 0px; */
     flex: 1;
     padding-left: 20px;
     padding-top: 14px;
@@ -88,26 +80,21 @@
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box .Text .Right {
-    /* margin-bottom: 5px; */
     flex: 1;
     text-align: right;
     padding-right: 20px;
-    font-size: min(4vw, 23px);
+    font-size: min(4vw, 22px);
 }
 
 .Footer-Frame .Footer .Lower .Right-Box {
     flex: 3;
-    /* padding-left: 24px; */
     padding: 1rem;
     font-size: min(4vw, 24px);
 }
 
-.Footer-Frame .Footer .Lower .Right-Box .Links {
-    /* margin-top: 30px; */
-}
+
 
 .Footer-Frame .Footer .Lower .Right-Box .Links .item {
-    /* margin-top: -6px; */
     font-size: min(3.8vw, 16px);
     line-height: 1.2em;
 }
@@ -132,7 +119,7 @@
             text-align: center;
             padding: 0;
             padding-bottom: 10px;
-            border-bottom: 3px solid #93B256;
+            border-bottom: 2px solid #93B256;
 
         }
 
@@ -157,7 +144,7 @@
         margin: auto;
         background-repeat: no-repeat;
         height: 300px;
-        border-bottom: 3px solid #93B256;
+        border-bottom: 2px solid #93B256;
         background-position: center;
     }
 
@@ -170,9 +157,10 @@
             display: flex;
             padding-top: 24px;
             padding-bottom: 80px;
-            border-bottom: 3px solid #93B256;
+            border-bottom: 2px solid #93B256;
             .wrapper_left {
                 flex: 3;
+                padding-left: 15px;
             }
 
             .wrapper_right {
@@ -197,7 +185,7 @@
 
     .Footer-Frame .Footer .Lower .Right-Box .wrapper {
         display: flex;
-        padding-right: 24px;
+        /* padding-right: 24px; */
     }
 
     .Footer-Frame .Footer .Lower .Right-Box .wrapper .Links {

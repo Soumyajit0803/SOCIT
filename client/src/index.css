@@ -39,6 +39,7 @@ a:hover {
     } */
 
 body {
+    padding: 1.2rem 0;
     /* display: flex; */
     /* place-items: center; */
     background-color: var(--black);
