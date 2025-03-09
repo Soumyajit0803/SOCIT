@@ -4,7 +4,7 @@ import { Button } from "antd";
 import { LinkedinOutlined, GithubOutlined, InstagramOutlined, MailOutlined } from '@ant-design/icons'
 const Footer = () => {
   return (
-    <div className='Footer-Frame'>
+    <footer className='Footer-Frame'>
       <div className='Footer'>
         <div className="Lower">
           <div className="Left-Box">
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 

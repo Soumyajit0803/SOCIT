@@ -1,0 +1,39 @@
+.header {
+    background: transparent;
+    margin: var(--appmargin);;
+    padding: 0.5rem;
+    border: 2px solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .hero {
+    font-size: 2rem;
+    color: var(--green)
+}
+
+.header .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.2rem;
+    margin: 0 2rem;
+}
+
+.header .drawer-button {
+    display: none;
+}
+
+@media only screen and (max-width: 720px) {
+    .header .menu {
+        display: none;
+    }
+
+    .header .drawer-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
