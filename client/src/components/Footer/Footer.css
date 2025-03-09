@@ -30,7 +30,7 @@
     flex: 3;
     border-right: 2px solid #93B256;
     padding: 1rem;
-    font-size: min(3.8vw, 16px);
+    font-size: min(3.8vw, 20px);
 }
 
 .Footer-Frame .Footer .Lower .Left-Box .Title {
@@ -95,7 +95,7 @@
 
 
 .Footer-Frame .Footer .Lower .Right-Box .Links .item {
-    font-size: min(3.8vw, 16px);
+    font-size: min(3.8vw, 20px);
     line-height: 1.2em;
 }
 
