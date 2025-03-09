@@ -8,19 +8,20 @@
 .Footer-Frame {
     /* position: absolute; */
     /* bottom: 0; */
-    font-family: Arsenal;
+    font-family: "Arsenal";
     color: white;
-    height: 500px;
-    width: 100%;
+    height: 350px;
+    /* width: 100%; */
     background-color: #1C1917;
-    padding: 0 30px 20px;
+    margin: 0 1.5rem;
+    /* padding: 0.5rem; */
 }
 
 .Footer-Frame .Footer {
     display: flex;
-    border: 3px solid #93B256;
+    border: 2px solid #93B256;
     height: 100%;
-    gap: 85px;
+    /* gap: 85px; */
 }
 
 .Footer-Frame .Footer .Lower {
@@ -31,27 +32,28 @@
 
 .Footer-Frame .Footer .Lower .Left-Box {
     flex: 3;
-    border-right: 3px solid #93B256;
-    padding: 30px 24px 30px 0;
-    font-size: min(4vw, 20px);
+    border-right: 2px solid #93B256;
+    /* padding: 30px 24px 30px 0; */
+    padding: 1rem;
+    font-size: min(3.8vw, 16px);
 }
 
 .Footer-Frame .Footer .Lower .Left-Box .Title {
     position: relative;
-    font-size: min(6vw, 30px);
-    padding-left: 24px;
+    font-size: min(6vw, 25px);
+    /* padding-left: 24px; */
     font-weight: bold;
     background-color: #1C1917;
 }
 
 .Footer-Frame .Footer .Lower .Left-Box .address {
-    padding-left: 24px;
+    /* padding-left: 24px; */
     background-color: #1C1917;
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box {
     flex: 7;
-    border-right: 3px solid #93B256;
+    border-right: 2px solid #93B256;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,40 +78,45 @@
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box .Text .Left {
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
     flex: 1;
     padding-left: 20px;
     padding-top: 14px;
-    font-size: min(4vw, 22.5px);
+    font-size: min(3.8vw, 16px);
+    height: 1em;
 
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box .Text .Right {
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     flex: 1;
     text-align: right;
     padding-right: 20px;
-    font-size: min(5vw, 30px);
+    font-size: min(4vw, 23px);
 }
 
 .Footer-Frame .Footer .Lower .Right-Box {
     flex: 3;
-    padding-left: 24px;
+    /* padding-left: 24px; */
+    padding: 1rem;
     font-size: min(4vw, 24px);
 }
 
 .Footer-Frame .Footer .Lower .Right-Box .Links {
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 .Footer-Frame .Footer .Lower .Right-Box .Links .item {
-    margin-top: -6px;
+    /* margin-top: -6px; */
+    font-size: min(3.8vw, 16px);
+    line-height: 1.2em;
 }
 
 .Footer-Frame .Footer .Lower .Right-Box .Links .Title {
-    margin-bottom: 10px;
-    font-size: min(5vw, 30px);
+    margin-top: 10px;
+    font-size: min(5vw, 25px);
     font-weight: bold;
+    line-height: 1.2em;
 }
 
 @media screen and (max-width: 960px) {
