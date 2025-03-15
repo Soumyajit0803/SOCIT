@@ -8,14 +8,14 @@ function Hero() {
           <div className="left">
             <div className="upper">
               <h1>Our Mission</h1>
-              <div className="text"><p>some lorem text to create importance and make everyone believe we have cool content coming up</p></div>
+              <div className="text"><p>Aim to provide quality education, foster innovation, and advance research in Information Technology.</p></div>
             </div>
             <div className="lower"></div>
           </div>
           <div className="middle">
             <div className="logo"></div>
             <div className="buffer"></div>
-            <div className="font">Students'
+            <div className="font">Student
               <div className='lower'>
                 Corner
   
@@ -26,8 +26,8 @@ function Hero() {
           <div className="right">
             <div className="upper"></div>
             <div className="lower">
-              <h1>Our Mission</h1>
-              <div className="text"><p>some lorem text to create importance and make everyone believe we have cool content coming up</p></div>
+              <h1>Highlights</h1>
+              <div className="text"><p>Top education, AI & cybersecurity research, industry ties, top labs, strong placements—empowering innovation.</p></div>
             </div>
           </div>
         </div>
