@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Arsenal:wght@0,400;0,700;1,400;1,700&display=swap");
 
 .Hero-Frame {
-    height: 750px;
+    height: 80vh;
+    min-height: 475px;
     margin: var(--appmargin);
     font-family: Arsenal;
 }
@@ -36,6 +37,8 @@
 .Hero .right .lower .text {
     font-size: 1.5rem;
     margin: 10px 15px 0;
+    line-height: 1.2em;
+
 }
 
 .Hero .right .lower {
@@ -93,6 +96,7 @@
     .Hero .right .lower .text,
     .Hero .left .upper .text {
         font-size: min(4vw, 1.4rem);
+        line-height: 1.2em;
     }
 }
 
@@ -103,6 +107,8 @@
         order: 1;
         min-height: 500px;
         border-bottom: 2px solid #93B256;
+        border-left: 0;
+        border-right: 0;
     }
     .Hero .middle .font { font-size: min(18vw, 120px); }
     .Hero .middle .buffer { flex: 3; }
@@ -121,7 +127,7 @@
     }
     .Hero .left .upper { border-right: 2px solid #93B256; border-bottom: 2px solid #93B256; }
     .Hero .left .lower, .Hero .right .lower { flex: 1; min-height: 250px; border-bottom: 2px solid #93B256; }
-    .Hero .right .lower { border-left: 2px solid #93B256; }
+    .Hero .right .lower { border-left: 2px solid #93B256; border-bottom: 0;}
 }
 
 @media screen and (max-width: 500px) {
