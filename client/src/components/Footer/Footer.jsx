@@ -16,11 +16,12 @@ const Footer = () => {
                 <div className="Title">
                   <div className="fixedImage">
                   </div>
-                  IIEST, Shibpur
+                  Society of Information Technology,<br />IIEST, Shibpur
                 </div>
                 <div className='address'>
                   Botanical garden area,
-                  Shibpur, 700013
+                  Shibpur, Howrah-700013<br />
+                  West bengal
                 </div>
               </div>
               <div className="wrapper_right"></div>
@@ -31,7 +32,7 @@ const Footer = () => {
             </div>
             <div className="Text">
               <div className="Left">
-                copyright 2024 SoCIT
+                copyright ©2024 SoCIT. All rights reserved.
               </div>
               <div className="Right">
                 <Button type='primary' icon={<LinkedinOutlined />}></Button>
@@ -46,9 +47,9 @@ const Footer = () => {
               <div className="Links">
                 <div className='Title'>Quick Links</div>
                 <div className="item">Home</div>
-                <div className="item">Home</div>
-                <div className="item">Home</div>
-                <div className="item">Home</div>
+                <div className="item">Academics</div>
+                <div className="item">Placement</div>
+                <div className="item">Events</div>
               </div>
               <div className="Links" id='shift_right'>
                 <div className='Title'>Developers</div>

@@ -34,11 +34,16 @@
     font-size: min(6vw, 25px);
     font-weight: bold;
     background-color: #1C1917;
+    line-height: 1.2em;
+    padding-bottom: 1rem
 }
 
 .Footer-Frame .Footer .Lower .Left-Box .address {
     background-color: #1C1917;
+    line-height: 1.2em;
+
 }
+
 
 .Footer-Frame .Footer .Lower .Mid-Box {
     flex: 9;
@@ -67,7 +72,7 @@
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box .Text .Left {
-    flex: 1;
+    flex: 1.5;
     padding-left: 20px;
     padding-top: 14px;
     font-size: min(3.8vw, 16px);

@@ -22,7 +22,6 @@ const AppDrawer = () => {
                         style={{
                             display: "flex",
                             justifyContent: "space-between",
-                            // border: "2px solid var(--green)"
                         }}
                     >
                         <span style={{ fontSize: "1.7rem" }}>Menu</span>
@@ -42,11 +41,15 @@ const AppDrawer = () => {
                         backgroundColor: "var(--black)",
                         color: "var(--green)",
                         fontSize: "1.5rem",
+                        border: "2px solid var(--green)",
                     },
                     header: {
                         backgroundColor: "var(--black)",
                         color: "#fff",
+                        border: "2px solid var(--green)"
+
                     },
+                    
                 }}
             >
                 <ul
@@ -82,10 +85,18 @@ const Header = () => {
         <header className="header">
             <div className="hero">SOCIT</div>
             <div className="menu">
-                <div className="menu-item">Home</div>
-                <div className="menu-item">Events</div>
-                <div className="menu-item">Placement</div>
-                <div className="menu-item">Gallery</div>
+                <Link style={{ textDecoration: "none", color: "inherit" }} to="/">
+                    <div className="menu-item">Home</div>
+                </Link>
+                <Link style={{ textDecoration: "none", color: "inherit" }} to="/events">
+                    <div className="menu-item">Events</div>
+                </Link>
+                <Link style={{ textDecoration: "none", color: "inherit" }} to="/placement">
+                    <div className="menu-item">Placement</div>
+                </Link>
+                <Link style={{ textDecoration: "none", color: "inherit" }} to="/gallery">
+                    <div className="menu-item">Gallery</div>
+                </Link>
             </div>
             <div className="drawer-button">
                 <AppDrawer />
