@@ -4,7 +4,8 @@
 .Footer-Frame {
     font-family: "Arsenal";
     color: white;
-    height: 350px;
+    height: 40vh;
+    min-height: 311px;
     background-color: #1C1917;
     margin: var(--appmargin);;
 }
