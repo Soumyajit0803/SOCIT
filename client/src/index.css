@@ -7,14 +7,10 @@
     padding: 0;
 }
 
-/* .ant-btn-primary{
-    all: unset !important;
-    margin: 10px !important;
+.ant-btn-variant-outlined {
+    background-color: var(--black);
 }
-.ant-btn-primary:hover{
-    all: unset !important;
-    margin: 10px !important;
-} */
+
 :root {
     font-family: "Arsenal";
     line-height: 1.5;

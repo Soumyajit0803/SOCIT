@@ -1,0 +1,12 @@
+.app-button:hover {
+    text-shadow: 0 0 2px var(--green);
+    background: transparent;
+}
+.app-button-icon {
+    transition: transform ease 0.3s;
+}
+.app-button:hover {
+    .app-button-icon {
+        transform: translateX(5px);
+    }
+}
