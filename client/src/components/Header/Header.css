@@ -1,6 +1,6 @@
 .header {
     background: transparent;
-    margin: var(--appmargin);;
+    /* margin: var(--appmargin);; */
     padding: 0.5rem;
     border: 2px solid var(--green);
     display: flex;

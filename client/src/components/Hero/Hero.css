@@ -3,7 +3,7 @@
 .Hero-Frame {
     height: 80vh;
     min-height: 475px;
-    margin: var(--appmargin);
+    /* margin: var(--appmargin); */
     font-family: Arsenal;
 }
 
