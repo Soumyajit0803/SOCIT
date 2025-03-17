@@ -1,26 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-
 .Footer-Frame {
-    font-family: "Arsenal";
+    font-family: "Arsenal", sans-serif;
     color: white;
-    height: 40vh;
-    min-height: 311px;
     background-color: #1C1917;
-    /* margin: var(--appmargin);; */
+    height: fit-content;
 }
 
 .Footer-Frame .Footer {
-    display: flex;
     border: 2px solid var(--green);
     border-top: 0;
     height: 100%;
 }
 
 .Footer-Frame .Footer .Lower {
-    flex: 100;
     display: flex;
     position: relative;
+    flex: 100;
 }
 
 .Footer-Frame .Footer .Lower .Left-Box {
@@ -32,40 +28,33 @@
 }
 
 .Footer-Frame .Footer .Lower .Left-Box .Title {
-    position: relative;
     font-size: min(6vw, 25px);
     font-weight: bold;
     background-color: #1C1917;
     line-height: 1.2em;
-    padding-bottom: 1rem
+    padding-bottom: 1rem;
 }
 
 .Footer-Frame .Footer .Lower .Left-Box .address {
     background-color: #1C1917;
     line-height: 1.2em;
-
 }
-
 
 .Footer-Frame .Footer .Lower .Mid-Box {
     flex: 9;
+    min-height: max(45vh, 400px);
     border-right: 2px solid var(--green);
     border-top: 2px solid var(--green);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box .Image {
-    margin: auto;
     flex: 1;
-    max-height: 80%;
     width: 100%;
-    background-image: url(/assets/socit-green.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(/assets/socit-green.webp) no-repeat center/contain;
+    margin: auto;
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box .Text {
@@ -73,30 +62,39 @@
     width: 100%;
     color: rgba(256, 256, 256, 0.75);
 }
+.more_button_mob{
+    visibility: hidden;
+}
+.Footer-Frame .Footer .Lower .Mid-Box .more_button {
+    padding: 12px;
+    width: 200px;
+    font-size: 22px;
+    color: black;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--green);
+    margin-bottom: 60px;
+}
 
-.Footer-Frame .Footer .Lower .Mid-Box .Text .Left {
-    flex: 1.5;
-    padding-left: 20px;
-    padding-top: 14px;
-    font-size: min(3.8vw, 16px);
-    height: 1em;
+.Footer-Frame .Footer .Lower .Mid-Box .more_button .text {
+    margin: 0 20px 0 12px;
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box .Text .Right {
     flex: 1;
-    text-align: right;
-    padding-right: 20px;
+    text-align: center;
+    padding-bottom: 8px;
     font-size: min(4vw, 22px);
 }
 
 .Footer-Frame .Footer .Lower .Right-Box {
+    position: relative;
     flex: 3;
     padding: 1rem;
     font-size: min(4vw, 24px);
     border-top: 2px solid var(--green);
 }
-
-
 
 .Footer-Frame .Footer .Lower .Right-Box .Links .item {
     font-size: min(3.8vw, 20px);
@@ -110,103 +108,143 @@
     line-height: 1.2em;
 }
 
+.icons {
+    visibility: hidden;
+}
+
+.copyright {
+    border: 2px solid var(--green);
+    border-top: 0;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 960px) {
+
     .Footer-Frame {
         height: fit-content;
     }
 
-    .Footer-Frame .Footer .Lower .Mid-Box .Text {
-        flex-direction: column;
-
-        .Right,
-        .Left {
-            text-align: center;
-            padding: 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--green);
-
-        }
-
-        .Left {
-            order: 2;
-            border: 0;
-            padding-bottom: 15px;
-            padding-top: 10px;
-        }
-    }
-
     .Footer-Frame .Footer .Lower {
         flex-direction: column;
-    }
-
-    .Footer-Frame .Footer .Lower .Left-Box .Logo_mob {
-        visibility: visible;
-        background-image: url(/assets/socit-green.webp);
-        background-size: contain;
-        width: 100%;
-
-        margin: auto;
-        background-repeat: no-repeat;
-        height: 300px;
-        border-bottom: 2px solid var(--green);
-        background-position: center;
-    }
-
-    .Footer-Frame .Footer .Lower .Left-Box {
-        order: 1;
-        border: 0;
-        padding: 0;
-
-        .mob_middle {
-            display: flex;
-            padding-top: 24px;
-            padding-bottom: 80px;
-            border-bottom: 2px solid var(--green);
-            .wrapper_left {
-                flex: 3;
-                padding-left: 15px;
-            }
-
-            .wrapper_right {
-                flex: 2;
-            }
-        }
-
-    }
-
-    .Footer-Frame .Footer .Lower .Right-Box {
-        order: 2;
+        max-height: fit-content;
     }
 
     .Footer-Frame .Footer .Lower .Mid-Box {
         order: 3;
         border: 0;
+        min-height: 20px;
+        max-height: 20px;
+        visibility: hidden;
     }
 
     .Footer-Frame .Footer .Lower .Mid-Box .Image {
         visibility: hidden;
     }
 
+    .Footer-Frame .Footer .Lower .Mid-Box .Text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Footer-Frame .Footer .Lower .Mid-Box .Text .Left {
+        order: 2;
+        padding: 10px 0 15px;
+        border: 0;
+    }
+
+    .Footer-Frame .Footer .Lower .Left-Box {
+        order: 1;
+        border: 0;
+        padding: 0;
+    }
+
+    .Footer-Frame .Footer .Lower .Left-Box .Logo_mob {
+        visibility: visible;
+        background: url(/assets/socit-green.webp) no-repeat top/contain;
+        width: 85%;
+        min-height: 70vw;
+        margin: auto;
+        position: relative;
+    }
+
+    .Footer-Frame .Footer .Lower .Left-Box .mob_middle {
+        display: flex;
+        padding: 24px 0 80px;
+        border-top: 2px solid var(--green);
+        border-bottom: 2px solid var(--green);
+    }
+
+    .Footer-Frame .Footer .Lower .Left-Box .mob_middle .wrapper_left {
+        flex: 3;
+        padding-left: 15px;
+    }
+
+    .Footer-Frame .Footer .Lower .Left-Box .mob_middle .wrapper_right {
+        flex: 2;
+    }
+
+    .Footer-Frame .Footer .Lower .Right-Box {
+        position: relative;
+        order: 2;
+        /* min-height: 500px; */
+    }
+
     .Footer-Frame .Footer .Lower .Right-Box .wrapper {
         display: flex;
-        /* padding-right: 24px; */
     }
 
     .Footer-Frame .Footer .Lower .Right-Box .wrapper .Links {
         flex: 1;
     }
 
-    .Footer-Frame .Footer .Lower .Right-Box .wrapper {
-        #shift_right {
-            text-align: right;
+    .Footer-Frame .Footer .Lower .Right-Box .wrapper #shift_right {
+        text-align: right;
+    }
+
+    .copyright {
+        border-top: 2px solid var(--green);
+        padding: 30px;
+        text-align: center;
+    }
+
+    .icons {
+        /* width: 186px; */
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 75px);
+        visibility: visible;
+        z-index: 20;
+    }
+
+    .more_button_mob {
+        visibility: visible;
+        padding: 10px;
+        width: 180px;
+        font-size: 22px;
+        color: black;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        background-color: var(--green);
+        margin-bottom: 60px;
+        position: absolute;
+        bottom: 1vw;
+        left: calc(50% - 90px);
+        .text{
+            margin: 0 20px 0 8px;
+          
         }
+ 
     }
 }
 
-@media screen and (max-width: 580px) {
-    .Footer-Frame .Footer .Lower .Left-Box .Logo_mob {
-
-        height: 200px;
-
+@media screen and (max-width: 500px) {
+    .copyright {
+        border: 2px solid var(--green);
+        padding: 12px;
+        text-align: center;
+        font-size: 0.8rem;
     }
 }

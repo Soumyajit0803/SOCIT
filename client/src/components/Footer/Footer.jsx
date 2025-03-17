@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { Button } from "antd";
-import { LinkedinOutlined, GithubOutlined, InstagramOutlined, MailOutlined } from "@ant-design/icons";
+import { LinkedinOutlined, GithubOutlined, InstagramOutlined, MailOutlined, SendOutlined } from "@ant-design/icons";
 const Footer = () => {
     return (
         <footer className="Footer-Frame">
@@ -10,6 +10,10 @@ const Footer = () => {
                     <div className="Left-Box">
                         <div className="Logo_mob">
                             <div className="Image"></div>
+                            <button className="more_button_mob">
+                                <div className="text">More Info</div>
+                                {<SendOutlined style={{ fontSize: "1.5rem" }} />}
+                            </button>
                         </div>
                         <div className="mob_middle">
                             <div className="wrapper_left">
@@ -30,8 +34,12 @@ const Footer = () => {
                     </div>
                     <div className="Mid-Box">
                         <div className="Image"></div>
+                        <button className="more_button">
+                            <div className="text">More Info</div>
+                            {<SendOutlined style={{ fontSize: "1.5rem" }} />}
+                        </button>
+
                         <div className="Text">
-                            <div className="Left">copyright ©2024 SoCIT. All rights reserved.</div>
                             <div className="Right">
                                 <Button
                                     shape="circle"
@@ -61,6 +69,26 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="Right-Box">
+                        <div className="icons">
+                            <Button
+                                style={{ margin: "0.2rem" }}
+                                icon={<LinkedinOutlined style={{ fontSize: "13px" }} />}
+                            ></Button>
+                            <Button
+
+                                style={{ margin: "0.2rem" }}
+                                icon={<GithubOutlined style={{ fontSize: "13px" }} />}
+                            ></Button>
+                            <Button
+                                style={{ margin: "0.2rem" }}
+                                icon={<InstagramOutlined style={{ fontSize: "13px" }} />}
+                            ></Button>
+                            <Button
+
+                                style={{ margin: "0.2rem" }}
+                                icon={<MailOutlined style={{ fontSize: "13px" }} />}
+                            ></Button>
+                        </div>
                         <div className="wrapper">
                             <div className="Links">
                                 <div className="Title">Quick Links</div>
@@ -79,6 +107,10 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
+
+            </div>
+            <div className="copyright">
+                <div className="text">copyright ©2024 SoCIT. All rights reserved.</div>
             </div>
         </footer>
     );
