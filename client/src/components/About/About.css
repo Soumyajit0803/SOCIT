@@ -1,0 +1,57 @@
+.content-wrapper {
+    margin: var(--appmargin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    .topic {
+        padding: 0.7rem;
+        border: 2px solid var(--green);
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 85vh;
+
+        .left, .right {
+            flex: 1;
+            width: 50%;
+            height: 100%;
+            border: 2px solid var(--green);
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .left {
+            padding: 0;
+
+            .img-box {
+                background: url("/assets/bg-circuit.png");
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        .right p{
+            padding-bottom: 2rem;
+        }
+        .right {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            flex-direction: column;
+            height: 100%;
+
+        }
+    }
+
+}
+
