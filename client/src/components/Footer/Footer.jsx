@@ -35,10 +35,10 @@ const Footer = () => {
                 copyright ©2024 SoCIT. All rights reserved.
               </div>
               <div className="Right">
-                <Button type='primary' icon={<LinkedinOutlined />}></Button>
-                <Button type='primary' icon={<GithubOutlined />}></Button>
-                <Button type='primary' icon={<InstagramOutlined />}></Button>
-                <Button type='primary' icon={<MailOutlined />}></Button>
+                <Button shape='circle' size='large' style={{margin: '0.2rem'}} icon={<LinkedinOutlined />}></Button>
+                <Button shape='circle' size='large' style={{margin: '0.2rem'}} icon={<GithubOutlined />}></Button>
+                <Button shape='circle' size='large' style={{margin: '0.2rem'}} icon={<InstagramOutlined />}></Button>
+                <Button shape='circle' size='large' style={{margin: '0.2rem'}} icon={<MailOutlined />}></Button>
               </div>
             </div>
           </div>

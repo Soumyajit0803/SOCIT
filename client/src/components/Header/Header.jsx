@@ -13,7 +13,7 @@ const AppDrawer = () => {
 
     return (
         <>
-            <Button type="primary" onClick={showDrawer} size="small">
+            <Button shape='circle' size='large' onClick={showDrawer} >
                 <MenuOutlined />
             </Button>
             <Drawer
@@ -25,7 +25,7 @@ const AppDrawer = () => {
                         }}
                     >
                         <span style={{ fontSize: "1.7rem" }}>Menu</span>
-                        <Button type="primary" onClick={closeDrawer} size="small">
+                        <Button shape='circle' size='large' onClick={closeDrawer} >
                             <CloseOutlined style={{ fontSize: "1rem" }} />
                         </Button>
                     </div>

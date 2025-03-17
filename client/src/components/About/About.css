@@ -1,5 +1,4 @@
 .content-wrapper {
-    margin: var(--appmargin);
     display: flex;
     align-items: center;
     justify-content: center;
