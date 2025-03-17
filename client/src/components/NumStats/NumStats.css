@@ -1,0 +1,44 @@
+.num-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    margin: var(--appmargin);
+    max-width: var(--appwidth);
+    /* border: 2px solid var(--green) */
+}
+
+.num-stats .card {
+    width: 100%;
+    border: 2px solid var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.num-stats .card .num {
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+.num-stats .card .field {
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 650px) {
+    .num-stats {
+        flex-direction: column;
+        padding: 1.5rem 0;
+    }
+
+    .num-stats .card .num {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    
+    .num-stats .card .field {
+        font-size: 1rem;
+    }
+}
