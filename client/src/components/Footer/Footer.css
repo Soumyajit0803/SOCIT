@@ -28,13 +28,37 @@
 }
 
 .Footer-Frame .Footer .Lower .Left-Box .Title {
+    margin-top: 10px;
     font-size: min(6vw, 25px);
     font-weight: bold;
     background-color: #1C1917;
     line-height: 1.2em;
     padding-bottom: 1rem;
 }
-
+#ql{
+    visibility: hidden;
+    max-height: 0;
+}
+#breaker_line{
+    /* margin: 0 1px; */
+    min-height: 100%;
+    min-width: 2px;
+    background-color: var(--green);
+}
+#no_space{
+    margin-top: -15px;
+    margin-bottom: 40px;
+}
+#details{
+    margin-top: 10px;
+}
+#fixed_height{
+    height: 260px;
+}
+.Footer-Frame .Footer .Lower .Left-Box .mob_middle .wrapper_right{
+    visibility: hidden;
+    max-height: 0;
+}
 .Footer-Frame .Footer .Lower .Left-Box .address {
     background-color: #1C1917;
     line-height: 1.2em;
@@ -102,14 +126,18 @@
 }
 
 .Footer-Frame .Footer .Lower .Right-Box .Links .Title {
-    margin-top: 10px;
+    margin-top: 6px;
     font-size: min(5vw, 25px);
     font-weight: bold;
     line-height: 1.2em;
 }
-
+.Footer-Frame .Footer .Lower .Left-Box .Logo_mob{
+    min-height: unset;
+    height: 0;
+}
 .icons {
     visibility: hidden;
+    max-height: 0;
 }
 
 .copyright {
@@ -120,8 +148,21 @@
 }
 
 /* Responsive Design */
+/* mobile view triggers here.... */
 @media screen and (max-width: 960px) {
-
+    #ql_mob_hidden{
+        visibility: hidden;
+        max-height: 0;
+    }
+    .Footer-Frame .Footer .Lower .Right-Box .wrapper #ql{
+        visibility: visible;
+        max-height: unset;
+        height: fit-content;
+    }
+    .Footer-Frame .Footer .Lower .Right-Box .wrapper #fixed_height{
+        visibility: hidden;
+        max-height: 0;
+    } 
     .Footer-Frame {
         height: fit-content;
     }
@@ -171,18 +212,23 @@
 
     .Footer-Frame .Footer .Lower .Left-Box .mob_middle {
         display: flex;
-        padding: 24px 0 80px;
         border-top: 2px solid var(--green);
         border-bottom: 2px solid var(--green);
     }
 
     .Footer-Frame .Footer .Lower .Left-Box .mob_middle .wrapper_left {
-        flex: 3;
+        padding-top: 20px;
+        flex: 1;
         padding-left: 15px;
     }
 
     .Footer-Frame .Footer .Lower .Left-Box .mob_middle .wrapper_right {
-        flex: 2;
+        padding-top: 20px;
+        visibility: visible;
+        max-height: unset;
+        flex: 1;
+        padding-right: 15px;
+        text-align: right;
     }
 
     .Footer-Frame .Footer .Lower .Right-Box {

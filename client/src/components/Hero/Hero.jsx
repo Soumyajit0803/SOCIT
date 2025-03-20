@@ -15,7 +15,7 @@ function Hero() {
           <div className="middle">
             <div className="logo"></div>
             <div className="buffer"></div>
-            <div className="font">Student
+            <div className="font">Students'
               <div className='lower'>
                 Corner
   
