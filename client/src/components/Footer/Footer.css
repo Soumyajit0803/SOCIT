@@ -150,6 +150,10 @@
 /* Responsive Design */
 /* mobile view triggers here.... */
 @media screen and (max-width: 960px) {
+    .Footer-Frame .Footer .Lower .Right-Box .wrapper #fixed_height{
+        height: 260px;
+        max-width: 130px;
+    }
     #ql_mob_hidden{
         visibility: hidden;
         max-height: 0;
@@ -158,6 +162,7 @@
         visibility: visible;
         max-height: unset;
         height: fit-content;
+ 
     }
     .Footer-Frame .Footer .Lower .Right-Box .wrapper #fixed_height{
         visibility: hidden;
