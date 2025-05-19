@@ -13,7 +13,6 @@ const CustomButton = ({ text, url }) => {
                 border: "1px solid var(--green)",
                 outline: "none",
                 borderRadius: "0",
-                fontSize: "1.2rem",
                 fontWeight: "400",
                 padding: "1.2rem",
             }}

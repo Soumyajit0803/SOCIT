@@ -1,10 +1,11 @@
+
 .content-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-
+    
     .topic {
         padding: 0.7rem;
         border: 2px solid var(--green);
@@ -16,11 +17,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 85vh;
+        height: min(42vw, 600px);
 
         .left, .right {
-            flex: 1;
-            width: 50%;
+        
             height: 100%;
             border: 2px solid var(--green);
             padding: 1rem;
@@ -29,7 +29,7 @@
 
         .left {
             padding: 0;
-
+            min-width: min(40vw, 800px);
             .img-box {
                 background: url("/assets/bg-circuit.png");
                 height: 100%;
@@ -50,7 +50,56 @@
             height: 100%;
 
         }
+      
     }
 
 }
 
+@media screen and (max-width: 1000px) {
+    .content-wrapper {
+        .topic {
+            font-size: 1.5rem;
+        }
+        .content {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(50vw + min(80vw, 500px));
+
+
+            .left, .right {
+                width: 100%;
+                min-height: 50vw;
+                font-size: min(3.3vw, 1.5rem);
+                
+            }
+            .left{
+                border: none;                
+            }
+            .right{
+                min-height: min(80vw, 500px);
+                min-width: calc(100vw - 3rem);
+
+            }
+            .img-box {
+                background: url("/assets/bg-circuit.png");
+                min-height: 100%;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+                border: none;
+            }
+            .right p{
+                padding-bottom: 0;
+
+            }
+            .overflow{
+                max-width: 800px;
+            }
+            .button_know_more{
+                padding-top: 15px;
+            }
+        }
+    }
+    
+}
