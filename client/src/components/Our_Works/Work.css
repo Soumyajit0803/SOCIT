@@ -4,7 +4,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    #right_align{
+        text-align: right;
+    }
     
     .topic {
         padding: 0.7rem;
@@ -43,12 +45,14 @@
             padding-bottom: 2rem;
         }
         .right {
+            /* text-align: right; */
+
             display: flex;
             align-items: start;
             justify-content: start;
             flex-direction: column;
             height: 100%;
-            
+
         }
       
     }
@@ -75,6 +79,12 @@
             }
             .left{
                 border: none;                
+            }
+            #order_1{
+                order: 1;
+            }
+            #order_2{
+                order: 2;
             }
             .right{
                 min-height: min(80vw, 500px);
