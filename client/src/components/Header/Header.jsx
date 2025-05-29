@@ -71,6 +71,9 @@ const AppDrawer = () => {
                     <Link style={{ textDecoration: "none", color: "inherit" }} to="/Placement">
                         <li>Placement</li>
                     </Link>
+                     <Link style={{ textDecoration: "none", color: "inherit" }} to="/faculties">
+                        <li>Faculties</li>
+                    </Link>
                     <Link style={{ textDecoration: "none", color: "inherit" }} to="/">
                         <li>Gallery</li>
                     </Link>
@@ -93,6 +96,9 @@ const Header = () => {
                 </Link>
                 <Link style={{ textDecoration: "none", color: "inherit" }} to="/placement">
                     <div className="menu-item">Placement</div>
+                </Link>
+                 <Link style={{ textDecoration: "none", color: "inherit" }} to="/faculties">
+                    <div className="menu-item">Faculties</div>
                 </Link>
                 <Link style={{ textDecoration: "none", color: "inherit" }} to="/gallery">
                     <div className="menu-item">Gallery</div>
