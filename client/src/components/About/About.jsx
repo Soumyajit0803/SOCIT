@@ -10,12 +10,12 @@ const About = () => {
                 
                 <div className="right">
                     <p>
-                        Welcome to SOCIT - the official club of the Information Technology Department at IIEST, Shibpur. We are a vibrant community of tech enthusiasts, dedicated to fostering innovation, collaboration, and learning in the field of Information Technology.<br/>
-                        At SOCIT, we organize hackathons, workshops, coding competitions, and tech talks to help students enhance their skills and stay updated with industry trends. Our mission is to empower students with knowledge, hands-on experience, and a strong network that bridges the gap between academia and the tech industry.<br/> <br />
-                        Join us in exploring the endless possibilities of technology and shaping the future of
-                        IT!
+                        <div className="overflow">
+                            Welcome to SOCIT - the official club of the Information Technology Department at IIEST, Shibpur. We are a vibrant community of tech enthusiasts, dedicated to fostering innovation, collaboration, and learning in the field of Information Technology.<br />
+                            At SOCIT, we organize hackathons, workshops, coding competitions, and tech talks to help students enhance their skills and stay updated with industry trends. Our mission is to empower students with knowledge, hands-on experience, and a strong network that bridges the gap between academia and the tech industry.<br />
+                        </div>
                     </p>
-                    <CustomButton text="Know more" url={"https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT"} />
+                    <div className="button_know_more"><CustomButton text="Know more" url={"https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT"} /></div>
                 </div>
                 <div className="left">
                     <div className="img-box"></div>

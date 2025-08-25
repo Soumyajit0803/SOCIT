@@ -10,3 +10,6 @@
         transform: translateX(5px);
     }
 }
+.app-button{
+    font-size: min(3.5vw, 1.3rem);
+}
