@@ -10,10 +10,11 @@ const Footer = () => {
                     <div className="Left-Box">
                         <div className="Logo_mob">
                             <div className="Image"></div>
-                            <button className="more_button_mob">
+                            {/* <button className="more_button_mob">
                                 <div className="text">More Info</div>
                                 {<SendOutlined style={{ fontSize: "1.5rem" }} />}
-                            </button>
+                            </button> */}
+                            <Button iconPosition="end" icon={<SendOutlined style={{ fontSize: "1.5rem" }} />} className="more_button_mob">More Info</Button>
                         </div>
                         <div className="mob_middle">
                             
@@ -67,10 +68,11 @@ const Footer = () => {
                     </div>
                     <div className="Mid-Box">
                         <div className="Image"></div>
-                        <button className="more_button">
+                        {/* <button className="more_button">
                             <div className="text">More Info</div>
                             {<SendOutlined style={{ fontSize: "1.5rem" }} />}
-                        </button>
+                        </button> */}
+                        <Button icon={<SendOutlined style={{ fontSize: "1.5rem" }} />} iconPosition="end" className="more_button">More Info</Button>
 
                         <div className="Text">
                             <div className="Right">

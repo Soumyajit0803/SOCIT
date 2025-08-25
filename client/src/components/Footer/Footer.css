@@ -90,15 +90,14 @@
     visibility: hidden;
 }
 .Footer-Frame .Footer .Lower .Mid-Box .more_button {
-    padding: 12px;
-    width: 200px;
-    font-size: 22px;
+    padding: 1.5rem;
+    font-size: 1.2rem;
     color: black;
     display: flex;
     align-items: center;
     border-radius: 10px;
     background-color: var(--green);
-    margin-bottom: 60px;
+    margin-bottom: 1rem;
 }
 
 .Footer-Frame .Footer .Lower .Mid-Box .more_button .text {
@@ -271,22 +270,19 @@
 
     .more_button_mob {
         visibility: visible;
-        padding: 10px;
-        width: 180px;
-        font-size: 22px;
+        padding: 1.5rem;
+        /* width: 180px; */
+        font-size: 1.2rem;
         color: black;
         display: flex;
         align-items: center;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         background-color: var(--green);
         margin-bottom: 60px;
         position: absolute;
         bottom: 1vw;
-        left: calc(50% - 90px);
-        .text{
-            margin: 0 20px 0 8px;
-          
-        }
+        transform: translateX(-50%);
+        left: 50%;
  
     }
 }
