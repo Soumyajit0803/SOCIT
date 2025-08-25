@@ -1,4 +1,4 @@
-.content-wrapper {
+.academics-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,10 +6,13 @@
 
 
     .topic {
-        padding: 0.7rem;
+        padding: 0.7rem 1rem;
         border: 2px solid var(--green);
         width: 100%;
         font-size: 2rem;
+        display: flex;
+        justify-content: flex-end;
+        
     }
 
     .content{
@@ -19,6 +22,7 @@
         height: 85vh;
 
         .left, .right {
+            /* flex: 1; */
             width: 50%;
             height: 100%;
             border: 2px solid var(--green);
@@ -43,11 +47,12 @@
         }
         .right {
             display: flex;
-            align-items: start;
+            align-items: flex-end;
             justify-content: start;
             flex-direction: column;
-            height: 100%;
+            /* height: 100%; */
 
+            text-align: right;
         }
     }
 

@@ -2,14 +2,12 @@ import React from "react";
 import "./About.css";
 import CustomButton from "../CustomButton/CustomButton";
 
-const About = ({content}) => {
+const About = () => {
     return (
         <div className="content-wrapper">
             <div className="topic">About Us</div>
             <div className="content">
-                <div className="left">
-                    <div className="img-box"></div>
-                </div>
+                
                 <div className="right">
                     <p>
                         Welcome to SOCIT - the official club of the Information Technology Department at IIEST, Shibpur. We are a vibrant community of tech enthusiasts, dedicated to fostering innovation, collaboration, and learning in the field of Information Technology.<br/>
@@ -18,6 +16,9 @@ const About = ({content}) => {
                         IT!
                     </p>
                     <CustomButton text="Know more" url={"https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT"} />
+                </div>
+                <div className="left">
+                    <div className="img-box"></div>
                 </div>
             </div>
         </div>

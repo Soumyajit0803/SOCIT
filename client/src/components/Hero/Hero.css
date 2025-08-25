@@ -68,11 +68,16 @@
     font-size: 140px;
     width: 100%;
     text-align: center;
-    letter-spacing: 5px;
+    font-size: 3rem;
+    /* letter-spacing: 5px; */
 }
 
 .Hero .middle .font .lower {
-    margin-top: -40px;
+    /* margin-top: -40px; */
+    font-size: 6rem;
+    line-height: 1em;
+    padding-top: 1rem;
+
 }
 
 .Hero .middle .buffer {

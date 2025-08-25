@@ -15,11 +15,12 @@ function Hero() {
           <div className="middle">
             <div className="logo"></div>
             <div className="buffer"></div>
-            <div className="font">Student
-              <div className='lower'>
-                Corner
-  
+            <div className="font">
+              Society of
+              <div className="lower">
+                Information Technology
               </div>
+            
             </div>
             <div className="buffer"></div>
           </div>

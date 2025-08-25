@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../../components/Hero/Hero";
 import About from "../../components/About/About";
+import Academics from "../../components/Academics/Academics";
 import NumStats from "../../components/NumStats/NumStats";
 
 const Homepage = () => {
@@ -8,6 +9,7 @@ const Homepage = () => {
         <>
             <Hero />
             <About />
+            <Academics />
             <NumStats />
         </>
     );
