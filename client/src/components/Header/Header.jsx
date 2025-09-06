@@ -74,7 +74,7 @@ const AppDrawer = () => {
                      <Link style={{ textDecoration: "none", color: "inherit" }} to="/faculties">
                         <li>Faculties</li>
                     </Link>
-                    <Link style={{ textDecoration: "none", color: "inherit" }} to="/">
+                    <Link style={{ textDecoration: "none", color: "inherit" }} to="/gallery">
                         <li>Gallery</li>
                     </Link>
                 </ul>
