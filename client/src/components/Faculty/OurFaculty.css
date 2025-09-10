@@ -196,11 +196,11 @@
     }
 
     .faculty-1 {
-      min-height: 350px;
+      min-height: 500px;
     }
 
     .faculty-image {
-      height: 150px;
+      height: 300px;
     }
 
     .faculty-content {
@@ -208,7 +208,7 @@
     }
 
     .faculty-name {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
 
     .faculty-designation {
