@@ -86,10 +86,15 @@
 
 
 /*add css for lower left and upper right*/
-.Hero .left .lower,
+
 .Hero .right .upper {
     height: 50%;
     border-bottom: 2px solid #93B256;
+}
+
+.Hero .left .lower{
+    height: 50%;
+    
 }
 
 .Hero .left .lower h1,
@@ -122,7 +127,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .Hero-Frame { height: fit-content; }
+    .Hero-Frame {/* height: fit-content; */}
     .Hero { flex-direction: column; }
     .Hero .middle {
         order: 1;
