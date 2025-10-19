@@ -63,20 +63,12 @@
 }
 
 .Hero .middle .font {
-    flex: 5;
-    font-size: 140px;
+    /* flex: 5; */
+    font-size: 4rem;
     width: 100%;
     text-align: center;
-    font-size: 3rem;
-    /* letter-spacing: 5px; */
-}
-
-.Hero .middle .font .lower {
-    /* margin-top: -40px; */
-    font-size: 6rem;
     line-height: 1em;
-    padding-top: 1rem;
-
+    /* letter-spacing: 5px; */
 }
 
 .Hero .middle .buffer {
@@ -113,7 +105,6 @@
 @media screen and (max-width: 1275px) {
     .Hero-Frame { height: 500px; }
     .Hero .middle { flex: 15; }
-    .Hero .middle .font { font-size: 100px; letter-spacing: 0; }
 
     .Hero .right .lower h1,
     .Hero .left .upper h1 {
@@ -127,7 +118,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .Hero-Frame {/* height: fit-content; */}
     .Hero { flex-direction: column; }
     .Hero .middle {
         order: 1;
@@ -136,7 +126,6 @@
         border-left: 0;
         border-right: 0;
     }
-    .Hero .middle .font { font-size: min(18vw, 120px); }
     .Hero .middle .buffer { flex: 3; }
 
     /*.Hero .right, .Hero .left {
