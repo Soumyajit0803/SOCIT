@@ -64,21 +64,14 @@
 }
 
 .Hero .middle .font {
-    flex: 5;
-    font-size: 140px;
+    /* flex: 5; */
+    /* font-size: 4rem; */
     width: 100%;
     text-align: center;
-    font-size: 3rem;
+    line-height: 1em;
     /* letter-spacing: 5px; */
 }
 
-.Hero .middle .font .lower {
-    /* margin-top: -40px; */
-    font-size: 6rem;
-    line-height: 1em;
-    padding-top: 1rem;
-
-}
 
 .Hero .middle .buffer {
     flex: 1;
@@ -88,7 +81,7 @@
 @media screen and (max-width: 1275px) {
     .Hero-Frame { height: 500px; }
     .Hero .middle { flex: 15; }
-    .Hero .middle .font { font-size: 100px; letter-spacing: 0; }
+    /* .Hero .middle .font { font-size: 4rem; letter-spacing: 0; } */
 
     .Hero .right .lower h1,
     .Hero .left .upper h1 {
@@ -111,7 +104,7 @@
         border-left: 0;
         border-right: 0;
     }
-    .Hero .middle .font { font-size: min(18vw, 120px); }
+    /* .Hero .middle .font { font-size: 3rem; } */
     .Hero .middle .buffer { flex: 3; }
 
     .Hero .right, .Hero .left {

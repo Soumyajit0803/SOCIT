@@ -55,6 +55,23 @@
             text-align: right;
         }
     }
-
 }
 
+@media only screen and (max-width: 1000px) {
+    .academics-wrapper {
+        .content{
+            flex-direction: column;
+            height: auto;
+
+            .left, .right {
+                width: 100%;
+                height: auto;
+            }
+
+            .right {
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+}

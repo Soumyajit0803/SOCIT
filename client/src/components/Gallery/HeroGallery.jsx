@@ -1,5 +1,4 @@
 import React from "react";
-import { Image } from "antd";
 import "./HeroGallery.css";
 const HeroGallery = () => {
     //add image locations and change transparency values here.

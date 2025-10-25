@@ -16,10 +16,7 @@ function Hero() {
             <div className="logo"></div>
             <div className="buffer"></div>
             <div className="font">
-              Society of
-              <div className="lower">
-                Information Technology
-              </div>
+              Society of Information Technology
             
             </div>
             <div className="buffer"></div>
