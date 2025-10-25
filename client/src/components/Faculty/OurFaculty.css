@@ -63,7 +63,7 @@
   }
 
   .faculty-name {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 200;
     margin: 0 0 4px 0; 
     color: white;
@@ -71,10 +71,11 @@
   }
 
   .faculty-designation {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin: 0 0 10px 0;
     color: #ccc;
     font-weight: normal;
+    line-height: 1.2;
   }
 
   .faculty-contact {
@@ -86,7 +87,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #ccc;
     line-height: 1.2;
   }
