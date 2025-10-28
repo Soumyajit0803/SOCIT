@@ -1,0 +1,69 @@
+.TitleText{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #93B256;
+}
+
+.StatsContainer{
+    display: flex;
+    flex-direction: row;
+    
+    /*remove later*/
+    min-height: 250px;
+    
+   
+}
+
+.Container{
+    border-right: 2px solid #93B256;
+    padding-top:3rem;
+    padding-bottom: 3rem;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    /*justify-content: flex-end;*/
+}
+
+.Container .data{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.Container .data .Value{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 5rem;
+}
+
+.Container .data .LPA{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.Container .SalaryType{
+    font-size: 2rem;
+}
+
+.StatsCarousel{
+    display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    .StatsCarousel{
+        display:block;
+    }
+
+    .StatsContainer{
+        display: none;
+    }
+}
