@@ -1,0 +1,75 @@
+.TitleText_SS{
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 510;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    border-top: 2px solid #93B256;
+}
+
+.SalaryStats{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-right: 2px solid #93B256;
+    border-bottom: 2px solid #93B256;
+    
+}
+
+.SalaryStats .EllipseContainer{
+    flex-shrink: 2;
+    flex-grow: 0;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.SalaryStats .SalaryText{
+    border-top:2px solid #93B256;
+    flex: 1 1 200px;
+
+
+    padding:1.5rem;
+    font-size: 1.4rem;
+    /*min-width: 100px;*/
+}
+
+
+/*media-queries for mobile devices*/
+
+@media screen and (max-width: 900px) {
+    .SalaryStats .EllipseContainer{
+        width: 300px;
+    }
+
+    .TitleText_SS{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .SalaryStats .EllipseContainer{
+        width: 200px;
+    }
+
+    .SalaryStats .SalaryText{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .SalaryStats .EllipseContainer{
+        display: none;
+    }
+
+    .SalaryStats .SalaryText{
+        background-image: url("/assets/graph.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
+
+
+
