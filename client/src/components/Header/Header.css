@@ -11,7 +11,7 @@
 
 .header .hero {
     font-size: 2rem;
-    color: var(--green)
+    color: var(--green);
 }
 
 .header .menu {
@@ -23,9 +23,21 @@
     margin: 0 2rem;
 }
 
+.menu-item {
+    width: min-content;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.active-menu-item {
+    border-bottom: 2px solid var(--green);
+}
+
 .header .drawer-button {
     display: none;
 }
+
 
 @media only screen and (max-width: 720px) {
     .header .menu {

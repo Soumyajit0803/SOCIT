@@ -8,7 +8,7 @@ export default function Placements(){
         <Hero/>
         <KeyHighlights/>
         <SalaryStats/>
-        <RecruitersCmp/>
+        {/* <RecruitersCmp/> */}
         </>
     )
 }

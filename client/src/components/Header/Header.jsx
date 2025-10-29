@@ -1,9 +1,34 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import { CloseCircleOutlined, CloseOutlined, MenuOutlined } from "@ant-design/icons";
 
 import { Drawer, Button } from "antd";
+
+const NavLink = ({ to, children, isDrawer = false, onClick }) => {
+    const location = useLocation();
+    const isActive = location.pathname.toLowerCase() === to.toLowerCase();
+
+    return (
+        <Link
+            style={{
+                textDecoration: "none",
+                color: isDrawer 
+                    ? (isActive ? "var(--text-primary)" : "var(--green)")
+                    : 'inherit'
+            }}
+            onClick={onClick}
+            to={to}
+        >
+            {isDrawer 
+                ? <li>{children}</li>
+                : <div className={`menu-item${isActive ? " active-menu-item" : ""}`}>
+                    {children}
+                  </div>
+            }
+        </Link>
+    );
+};
 
 const AppDrawer = () => {
     const [open, setOpen] = useState(false);
@@ -13,7 +38,7 @@ const AppDrawer = () => {
 
     return (
         <>
-            <Button shape='circle' size='large' onClick={showDrawer} >
+            <Button shape="circle" size="large" onClick={showDrawer}>
                 <MenuOutlined />
             </Button>
             <Drawer
@@ -25,7 +50,7 @@ const AppDrawer = () => {
                         }}
                     >
                         <span style={{ fontSize: "1.7rem" }}>Menu</span>
-                        <Button shape='circle' size='large' onClick={closeDrawer} >
+                        <Button shape="circle" size="large" onClick={closeDrawer}>
                             <CloseOutlined style={{ fontSize: "1rem" }} />
                         </Button>
                     </div>
@@ -46,37 +71,34 @@ const AppDrawer = () => {
                     header: {
                         backgroundColor: "var(--black)",
                         color: "#fff",
-                        border: "2px solid var(--green)"
-
+                        border: "2px solid var(--green)",
                     },
-                    
                 }}
             >
                 <ul
                     style={{
                         listStyleType: "none",
-                        // border: "2px solid var(--green)",
                         display: "flex",
                         flexDirection: "column",
                         gap: "1rem",
                         padding: "10px",
                     }}
                 >
-                    <Link style={{ textDecoration: "none", color: "inherit" }} to="/">
-                        <li>Home</li>
-                    </Link>
-                    <Link style={{ textDecoration: "none", color: "inherit" }} to="/Events">
-                        <li>Events</li>
-                    </Link>
-                    <Link style={{ textDecoration: "none", color: "inherit" }} to="/Placement">
-                        <li>Placement</li>
-                    </Link>
-                     <Link style={{ textDecoration: "none", color: "inherit" }} to="/faculties">
-                        <li>Faculties</li>
-                    </Link>
-                    <Link style={{ textDecoration: "none", color: "inherit" }} to="/gallery">
-                        <li>Gallery</li>
-                    </Link>
+                    <NavLink to="/" isDrawer onClick={closeDrawer}>
+                        Home
+                    </NavLink>
+                    <NavLink to="/Events" isDrawer onClick={closeDrawer}>
+                        Events
+                    </NavLink>
+                    <NavLink to="/Placement" isDrawer onClick={closeDrawer}>
+                        Placement
+                    </NavLink>
+                    <NavLink to="/faculties" isDrawer onClick={closeDrawer}>
+                        Faculties
+                    </NavLink>
+                    <NavLink to="/gallery" isDrawer onClick={closeDrawer}>
+                        Gallery
+                    </NavLink>
                 </ul>
             </Drawer>
         </>
@@ -88,21 +110,11 @@ const Header = () => {
         <header className="header">
             <div className="hero">SOCIT</div>
             <div className="menu">
-                <Link style={{ textDecoration: "none", color: "inherit" }} to="/">
-                    <div className="menu-item">Home</div>
-                </Link>
-                <Link style={{ textDecoration: "none", color: "inherit" }} to="/events">
-                    <div className="menu-item">Events</div>
-                </Link>
-                <Link style={{ textDecoration: "none", color: "inherit" }} to="/placement">
-                    <div className="menu-item">Placement</div>
-                </Link>
-                 <Link style={{ textDecoration: "none", color: "inherit" }} to="/faculties">
-                    <div className="menu-item">Faculties</div>
-                </Link>
-                <Link style={{ textDecoration: "none", color: "inherit" }} to="/gallery">
-                    <div className="menu-item">Gallery</div>
-                </Link>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/events">Events</NavLink>
+                <NavLink to="/placement">Placement</NavLink>
+                <NavLink to="/faculties">Faculties</NavLink>
+                <NavLink to="/gallery">Gallery</NavLink>
             </div>
             <div className="drawer-button">
                 <AppDrawer />
