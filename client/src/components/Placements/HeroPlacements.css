@@ -1,0 +1,144 @@
+.Hero-Frame {
+    height: 80vh;
+    min-height: 475px;
+}
+
+.Hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 2px solid #93B256;
+    border-top: 0;
+}
+
+.Hero .left,
+.Hero .right {
+    flex: 10;
+    min-height: 100%;
+}
+
+.Hero .left .upper,
+.Hero .right .upper {
+    height: 50%;
+    border-bottom: 2px solid #93B256;
+}
+
+.Hero .left .upper h1,
+.Hero .right .lower h1 {
+    font-size: 2rem;
+    margin: 20px 15px 0;
+}
+
+
+.Hero .right .lower .text {
+    font-size: 1.2rem;
+    margin: 10px 15px 0;
+    line-height: 1.2em;
+
+}
+
+/*changed font size to compensate for lack of heading*/
+.Hero .left .upper .text{
+    font-size: 1.4rem;
+    margin: 10px 15px 0;
+    line-height: 1.2em;
+    padding-top: 0.3rem;
+    max-width: 23rem;
+}
+
+
+.Hero .right .lower {
+    height: 50%;
+    text-align: right;
+}
+
+.Hero .middle {
+    position: relative;
+    flex: 22;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #93B256;
+    border-right: 2px solid #93B256;
+    background: rgba(0, 0, 0, 0.2) url(/assets/bg-circuit.png) no-repeat center/cover;
+}
+
+.Hero .middle .logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    min-height: 100px;
+    background: url(/assets/socit-logo-dark.png) no-repeat bottom/contain;
+}
+
+.Hero .middle .font {
+    /* flex: 5; */
+    font-size: 6rem;
+    width: 100%;
+    text-align: center;
+    line-height: 1em;
+    /* letter-spacing: 5px; */
+}
+
+
+.Hero .middle .buffer {
+    flex: 1;
+    width: 100%;
+}
+
+@media screen and (max-width: 1275px) {
+    .Hero-Frame { height: 500px; }
+    .Hero .middle { flex: 15; }
+    /* .Hero .middle .font { font-size: 4rem; letter-spacing: 0; } */
+
+    .Hero .right .lower h1,
+    .Hero .left .upper h1 {
+        font-size: min(6vw, 1.7rem);
+    }
+    .Hero .right .lower .text,
+    .Hero .left .upper .text {
+        font-size: min(4vw, 1.4rem);
+        line-height: 1.2em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .Hero-Frame { height: fit-content; }
+    .Hero { flex-direction: column; }
+    .Hero .middle {
+        order: 1;
+        min-height: 500px;
+        border-bottom: 2px solid #93B256;
+        border-left: 0;
+        border-right: 0;
+    }
+    /* .Hero .middle .font { font-size: 3rem; } */
+    .Hero .middle .buffer { flex: 3; }
+
+    .Hero .right, .Hero .left {
+        min-height: 250px;
+        display: flex;
+        border: 0;
+    }
+    .Hero .right { order: 3; }
+    .Hero .left { order: 2; }
+    .Hero .right .upper, .Hero .left .upper {
+        flex: 1;
+        min-height: 250px;
+        border: 0;
+    }
+    .Hero .left .upper { border-right: 2px solid #93B256; border-bottom: 2px solid #93B256; }
+    .Hero .left .lower, .Hero .right .lower { flex: 1; min-height: 250px; border-bottom: 2px solid #93B256; }
+    .Hero .right .lower { border-left: 2px solid #93B256; border-bottom: 0;}
+
+}
+
+@media screen and (max-width: 500px) {
+    .Hero .middle { min-height: 350px; }
+
+    .Hero .middle .font{
+        font-size: 4rem;
+    }
+}
