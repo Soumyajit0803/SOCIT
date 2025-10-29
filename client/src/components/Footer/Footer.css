@@ -36,7 +36,7 @@
     padding-bottom: 1rem;
 }
 #ql{
-    visibility: hidden;
+    display: none;
     max-height: 0;
 }
 #breaker_line{
@@ -56,7 +56,7 @@
     height: 260px;
 }
 .Footer-Frame .Footer .Lower .Left-Box .mob_middle .wrapper_right{
-    visibility: hidden;
+    display: none;
     max-height: 0;
 }
 .Footer-Frame .Footer .Lower .Left-Box .address {
@@ -87,7 +87,7 @@
     color: rgba(256, 256, 256, 0.75);
 }
 .more_button_mob{
-    visibility: hidden;
+    display: none;
 }
 .Footer-Frame .Footer .Lower .Mid-Box .more_button {
     padding: 1.5rem;
@@ -135,7 +135,7 @@
     height: 0;
 }
 .icons {
-    visibility: hidden;
+    display: none;
     max-height: 0;
 }
 
@@ -154,17 +154,17 @@
         max-width: 130px;
     }
     #ql_mob_hidden{
-        visibility: hidden;
+        display: none;
         max-height: 0;
     }
     .Footer-Frame .Footer .Lower .Right-Box .wrapper #ql{
-        visibility: visible;
+        display: block;
         max-height: unset;
         height: fit-content;
  
     }
     .Footer-Frame .Footer .Lower .Right-Box .wrapper #fixed_height{
-        visibility: hidden;
+        display: none;
         max-height: 0;
     } 
     .Footer-Frame {
@@ -181,11 +181,11 @@
         border: 0;
         min-height: 20px;
         max-height: 20px;
-        visibility: hidden;
+        display: none;
     }
 
     .Footer-Frame .Footer .Lower .Mid-Box .Image {
-        visibility: hidden;
+        display: none;
     }
 
     .Footer-Frame .Footer .Lower .Mid-Box .Text {
@@ -206,7 +206,7 @@
     }
 
     .Footer-Frame .Footer .Lower .Left-Box .Logo_mob {
-        visibility: visible;
+        display: block;
         background: url(/assets/socit-green.webp) no-repeat top/contain;
         width: 85%;
         min-height: 70vw;
@@ -228,7 +228,7 @@
 
     .Footer-Frame .Footer .Lower .Left-Box .mob_middle .wrapper_right {
         padding-top: 20px;
-        visibility: visible;
+        display: block;
         max-height: unset;
         flex: 1;
         padding-right: 15px;
@@ -264,12 +264,12 @@
         position: absolute;
         top: 50%;
         left: calc(50% - 75px);
-        visibility: visible;
+        display: block;
         z-index: 20;
     }
 
     .more_button_mob {
-        visibility: visible;
+        display: block;
         padding: 1.5rem;
         /* width: 180px; */
         font-size: 1.2rem;
