@@ -2,6 +2,18 @@ import React from "react";
 import "./Footer.css";
 import { Button } from "antd";
 import { LinkedinOutlined, GithubOutlined, InstagramOutlined, MailOutlined, SendOutlined } from "@ant-design/icons";
+import CustomButton from "../CustomButton/CustomButton";
+
+const Developer = ({ name, github }) => (
+    <div className="developer">
+        <a href={"https://github.com/" + github}>{name}</a>
+    </div>
+);
+const ExtLink = ({ name }) => (
+    <div className="extlink">
+        <a href={"/" + name.toLowerCase()}>{name}</a>
+    </div>
+);
 const Footer = () => {
     return (
         <footer className="Footer-Frame">
@@ -14,22 +26,29 @@ const Footer = () => {
                                 <div className="text">More Info</div>
                                 {<SendOutlined style={{ fontSize: "1.5rem" }} />}
                             </button> */}
-                            <Button iconPosition="end" icon={<SendOutlined style={{ fontSize: "1.5rem" }} />} className="more_button_mob">More Info</Button>
+                            <Button
+                                iconPosition="end"
+                                icon={<SendOutlined style={{ fontSize: "1.5rem" }} />}
+                                className="more_button_mob"
+                            >
+                                More Info
+                            </Button>
                         </div>
                         <div className="mob_middle">
-                            
                             <div className="wrapper_left">
                                 <div id="fixed_height">
                                     <div className="Title">
                                         <div className="fixedImage"></div>
-                                        Society of Information 
-                                        <br />Technology,
+                                        Society of Information
+                                        <br />
+                                        Technology,
                                         <br />
                                         IIEST, Shibpur
                                     </div>
-                                    <div className="address">
-                                        Botanical garden area, 
-                                        <br />Shibpur, Howrah-700013
+                                    <div className="address" style={{color: "var(--text-secondary) !important"}}>
+                                        Botanical garden area,
+                                        <br />
+                                        Shibpur, Howrah-700013
                                         <br />
                                         West bengal
                                     </div>
@@ -39,29 +58,35 @@ const Footer = () => {
                                         Quick Links
                                     </div>
                                     <div className="address" id="no_space">
-                                        <div className="item">Home</div>
-                                        <div className="item">Academics</div>
-                                        <div className="item">Placement</div>
-                                        <div className="item">Events</div>
+                                        <div className="item">
+                                            <ExtLink link="/" name="Home" />
+                                        </div>
+                                        <div className="item">
+                                            <ExtLink link="/academics" name="Academics" />
+                                        </div>
+                                        <div className="item">
+                                            <ExtLink link="/placements" name="Placement" />
+                                        </div>
+                                        <div className="item">
+                                            <ExtLink link="/events" name="Events" />
+                                        </div>
+                                        <div className="item">
+                                            <ExtLink link="/faculty" name="Faculty" />
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div id="breaker_line">
-                                
-                            </div>
+                            <div id="breaker_line"></div>
                             <div className="wrapper_right">
                                 <div className="Links" id="fixed_height">
                                     <div className="Title">Head of Dept</div>
-                                    <div>
-                                        <div className="item">Prof. Tuhina Samanta</div>
+                                    <div style={{color: "red !important"}}>
+                                        <div className="item" >Prof. Tuhina Samanta</div>
                                         <div className="item">hod.it@faculty.iiests.ac.in</div>
                                         <div className="item">hod@it.iiests.ac.in</div>
                                         <div className="item">+91 33 2668 4561-63</div>
                                         <div className="item">+91 33 2668 0521-25</div>
-
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -72,7 +97,7 @@ const Footer = () => {
                             <div className="text">More Info</div>
                             {<SendOutlined style={{ fontSize: "1.5rem" }} />}
                         </button> */}
-                        <Button icon={<SendOutlined style={{ fontSize: "1.5rem" }} />} iconPosition="end" className="more_button">More Info</Button>
+                        <CustomButton text="More Info" url={"https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT"} />
 
                         <div className="Text">
                             <div className="Right">
@@ -110,7 +135,6 @@ const Footer = () => {
                                 icon={<LinkedinOutlined style={{ fontSize: "13px" }} />}
                             ></Button>
                             <Button
-
                                 style={{ margin: "0.2rem" }}
                                 icon={<GithubOutlined style={{ fontSize: "13px" }} />}
                             ></Button>
@@ -119,7 +143,6 @@ const Footer = () => {
                                 icon={<InstagramOutlined style={{ fontSize: "13px" }} />}
                             ></Button>
                             <Button
-
                                 style={{ margin: "0.2rem" }}
                                 icon={<MailOutlined style={{ fontSize: "13px" }} />}
                             ></Button>
@@ -140,21 +163,22 @@ const Footer = () => {
                                     <div className="item">hod@it.iiests.ac.in</div>
                                     <div className="item">+91 33 2668 4561-63</div>
                                     <div className="item">+91 33 2668 0521-25</div>
-
                                 </div>
-
                             </div>
                             <div className="Links" id="shift_right">
-                                <div className="Title">Developers</div>
-                                <div className="item">Asif</div>
-                                <div className="item">Asif</div>
-                                <div className="item">Asif</div>
-                                <div className="item">Asif</div>
+                                <div className="Title">
+                                    Developers <GithubOutlined />
+                                </div>
+                                <Developer name="Soumyajit Karmakar" github="soumyajit0803" />
+                                <Developer name="Abhijit Karmakar" github="abhijit004" />
+                                <Developer name="Asif Tanvir" github="Asif-Tanvir-2006" />
+                                <Developer name="Satish Kumar Singh" github="a-sksingh113" />
+                                <Developer name="Prayas Sinha" github="sinpea" />
+                                <Developer name="Anshika Gupta" github="flex0ing-ag" />
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="copyright">
                 <div className="text">copyright ©2024 SoCIT. All rights reserved.</div>

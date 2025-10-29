@@ -63,6 +63,10 @@ div::-webkit-scrollbar {
     display: none;
 }
 
+p {
+    color: var(--text-secondary);
+}
+
 
 @media only screen and (max-width: 480px) {
     :root {

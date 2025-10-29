@@ -144,7 +144,40 @@
     border-top: 0;
     padding: 30px;
     text-align: center;
+    color: var(--text-secondary);
 }
+
+.developer {
+    width: max-content;
+    border-bottom: 2px solid transparent;
+    font-size: min(3.8vw, 20px);
+    border-bottom: 2px solid transparent;
+}
+
+.developer a {
+    color: var(--green) !important;
+    text-decoration: none;
+}
+
+.developer:hover {
+    border-bottom: 2px solid var(--green);
+}
+
+.extlink {
+    font-size: min(3.8vw, 20px);
+    width: min-content;
+    border-bottom: 2px solid transparent;
+}
+
+.extlink a {
+    text-decoration: none;
+    color: var(--green) !important;
+}
+
+.extlink:hover {
+    border-bottom: 2px solid var(--green);
+}
+
 
 /* Responsive Design */
 /* mobile view triggers here.... */
@@ -262,8 +295,8 @@
     .icons {
         /* width: 186px; */
         position: absolute;
-        top: 50%;
-        left: calc(50% - 75px);
+        bottom: 40px;
+        left: 0;
         display: block;
         z-index: 20;
     }
