@@ -19,7 +19,7 @@ export default function KeyHighlights(){
                 <div className="data">
                     <div className="Value">
                         <span>
-                            10
+                            14
                         </span>
                     </div>
                     <div className="LPA">
@@ -30,14 +30,14 @@ export default function KeyHighlights(){
                 </div>
 
                 <div className="SalaryType">
-                    Median Salary
+                    Average Salary
                 </div>
             </div>
             <div className="Container lc">
                 <div className="data">
                     <div className="Value">
                         <span>
-                            10
+                            11
                         </span>
                     </div>
                     <div className="LPA">
@@ -55,7 +55,7 @@ export default function KeyHighlights(){
                 <div className="data">
                     <div className="Value">
                         <span>
-                            10
+                            55
                         </span>
                     </div>
                     <div className="LPA">
@@ -66,25 +66,25 @@ export default function KeyHighlights(){
                 </div>
 
                 <div className="SalaryType">
-                    Median Salary
+                    Highest Salary
                 </div>
             </div>
             <div className="Container rr">
                 <div className="data">
                     <div className="Value">
                         <span>
-                            10
+                            80
                         </span>
                     </div>
                     <div className="LPA">
                         <span>
-                            LPA
+                            %
                         </span>
                     </div>
                 </div>
 
                 <div className="SalaryType">
-                    Median Salary
+                    Students Placed
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@ export default function KeyHighlights(){
                     <div className="data">
                         <div className="Value">
                             <span>
-                                10
+                                14
                             </span>
                         </div>
                         <div className="LPA">
@@ -106,7 +106,7 @@ export default function KeyHighlights(){
                     </div>
 
                     <div className="SalaryType">
-                        Median Salary
+                        Average Salary
                     </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ export default function KeyHighlights(){
                         <div className="data">
                             <div className="Value">
                                 <span>
-                                    10
+                                    11
                                 </span>
                             </div>
                             <div className="LPA">
@@ -135,7 +135,7 @@ export default function KeyHighlights(){
                     <div className="data">
                         <div className="Value">
                             <span>
-                                10
+                                55
                             </span>
                         </div>
                         <div className="LPA">
@@ -146,7 +146,7 @@ export default function KeyHighlights(){
                     </div>
 
                     <div className="SalaryType">
-                        Median Salary
+                        Highest Salary
                     </div>
                 </div>
                 </div>
@@ -155,18 +155,18 @@ export default function KeyHighlights(){
                     <div className="data">
                         <div className="Value">
                             <span>
-                                10
+                                80
                             </span>
                         </div>
                         <div className="LPA">
                             <span>
-                                LPA
+                                %
                             </span>
                         </div>
                     </div>
 
                     <div className="SalaryType">
-                        Median Salary
+                        Placed Students
                     </div>
                 </div>
                 </div>
