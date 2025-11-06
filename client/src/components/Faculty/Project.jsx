@@ -69,14 +69,12 @@ const Project = () => {
         ))}
       </div>
 
-      <div className="list">
         <a
           className="see-full-btn"
-          onClick={() => setShowAll(!showAll)}
+          onClick={() => window.open("https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT", "_blank")}
         >
-          {showAll ? "Hide the list" : "See full list"}
+          See Full list
         </a>
-      </div>
     </div>
   );
 };

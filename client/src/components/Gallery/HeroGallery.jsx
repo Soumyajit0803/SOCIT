@@ -4,8 +4,8 @@ const HeroGallery = () => {
     //add image locations and change transparency values here.
     const imageList = {
         left_u:{src:"/assets/placeholder.png",alpha:0.5},
-        left_d:{src:"/assets/placeholder.png",alpha:0.5},
-        right_u:{src:"/assets/placeholder.png",alpha:0.5},
+        left_d:{src:"/assets/placeholder.png",alpha:1},
+        right_u:{src:"/assets/placeholder.png",alpha:1},
         right_d:{src:"/assets/placeholder.png",alpha:0.5}
     };
     

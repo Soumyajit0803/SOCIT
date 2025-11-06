@@ -109,6 +109,7 @@
     text-align: center;
     padding-bottom: 8px;
     font-size: min(4vw, 22px);
+    padding-top: 1rem;
 }
 
 .Footer-Frame .Footer .Lower .Right-Box {
@@ -123,7 +124,11 @@
     font-size: min(3.8vw, 20px);
     line-height: 1.2em;
 }
-
+.Footer-Frame .item-x {
+    font-size: min(3.8vw, 20px);
+    line-height: 1.2em;
+    color: #aeaeae !important 
+}
 .Footer-Frame .Footer .Lower .Right-Box .Links .Title {
     margin-top: 6px;
     font-size: min(5vw, 25px);
@@ -149,24 +154,47 @@
 
 .developer {
     width: max-content;
-    border-bottom: 2px solid transparent;
     font-size: min(3.8vw, 20px);
-    border-bottom: 2px solid transparent;
+    position: relative
+}
+
+.developer::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0%;
+    height: 1.3px;
+    background-color: var(--green);
+    transition: all ease 0.2s;
+    opacity: 0;
 }
 
 .developer a {
     color: var(--green) !important;
     text-decoration: none;
+    transition: all ease 0.2s;
 }
 
-.developer:hover {
-    border-bottom: 2px solid var(--green);
+.developer:hover::before {
+    width: 100%;
+    opacity: 1;
 }
 
 .extlink {
     font-size: min(3.8vw, 20px);
     width: min-content;
-    border-bottom: 2px solid transparent;
+    position: relative
+}
+
+.extlink::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0%;
+    height: 1.3px;
+    background-color: var(--green);
+    transition: all ease 0.2s;
+    opacity: 0;
 }
 
 .extlink a {
@@ -174,8 +202,9 @@
     color: var(--green) !important;
 }
 
-.extlink:hover {
-    border-bottom: 2px solid var(--green);
+.extlink:hover::before {
+    width: 100%;
+    opacity: 1;
 }
 
 
@@ -283,7 +312,10 @@
     }
 
     .Footer-Frame .Footer .Lower .Right-Box .wrapper #shift_right {
-        text-align: right;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .copyright {

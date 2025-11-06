@@ -147,26 +147,34 @@ p {
   font-size: 1.05rem;
 }
 
-.list {
-  /* text-align: center;
-  margin: 20px 0; */
-  position: relative;
-  padding: 0.5rem;
-  border: 2px solid var(--green);
-  width: 100%;
-  height: 230px;
-  font-size: 2rem;
-  text-align: right;
-}
-
-.list a {
-  color: var(--green);
-  text-decoration: underline;
-  font-size: 1.3rem;
+.see-full-btn {
+  margin: 1rem;
+  align-self: end;
   cursor: pointer;
-  font-weight: 500;
+  transition :all ease 0.2s;
+  position :relative;
+  width: fit-content;
+  font-size: 1.2rem;
 }
 
+.see-full-btn:hover {
+  color: var(--green)
+}
+.see-full-btn::before{
+  position: absolute;
+  bottom: 0;
+  content: '';
+  width: 0px;
+  height: 2px;
+  background-color: var(--green);
+  opacity: 0;
+  transition: all ease 0.2s;
+}
+
+.see-full-btn:hover::before {
+  opacity: 1;
+  width: 100%;
+}
 /* button{
     background-color: transparent;
     border: none;
