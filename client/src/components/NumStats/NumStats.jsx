@@ -12,9 +12,9 @@ const NumCard = ({ field, value }) => {
 
 const NumStats = () => {
     const data = [
-        { field: "Ongoing Projects", value: 400 },
-        { field: "Ongoing Projects", value: 400 },
-        { field: "Ongoing Projects", value: 400 },
+        { field: "Students placed", value: 60 },
+        { field: "Total offers", value: 70 },
+        { field: "Ongoing Projects", value: 60 },
     ];
     return (
         <div className="num-stats">

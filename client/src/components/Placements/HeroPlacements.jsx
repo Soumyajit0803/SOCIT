@@ -28,8 +28,8 @@ function Hero() {
           <div className="right">
             <div className="upper"></div>
             <div className="lower">
-              <h1>Our Values</h1>
-              <div className="text"><p>Top education, AI & cybersecurity research, industry ties, top labs, strong placements—empowering innovation.</p></div>
+              <h1></h1>
+              <div className="text"><p>Top skills for recruiters include softare engineering, web/network expertise and various consultant positions.</p></div>
             </div>
           </div>
         </div>
