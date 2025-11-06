@@ -9,9 +9,9 @@ const Developer = ({ name, github }) => (
         <a href={"https://github.com/" + github}>{name}</a>
     </div>
 );
-const ExtLink = ({ name }) => (
+const ExtLink = ({ link, name }) => (
     <div className="extlink">
-        <a href={"/" + name.toLowerCase()}>{name}</a>
+        <a href={link}>{name}</a>
     </div>
 );
 const Footer = () => {
@@ -59,19 +59,16 @@ const Footer = () => {
                                     </div>
                                     <div className="address" id="no_space">
                                         <div className="item">
-                                            <ExtLink link="/" name="Home" />
+                                            <ExtLink link="https://www.iiests.ac.in/" name="IIEST&nbsp;Shibpur" />
                                         </div>
                                         <div className="item">
-                                            <ExtLink link="/academics" name="Academics" />
+                                            <ExtLink link="https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT" name="About" />
                                         </div>
+                                        {/* <div className="item">
+                                            <ExtLink link="https://github.com/Soumyajit0803/SOCIT" name="Github" />
+                                        </div> */}
                                         <div className="item">
-                                            <ExtLink link="/placements" name="Placement" />
-                                        </div>
-                                        <div className="item">
-                                            <ExtLink link="/events" name="Events" />
-                                        </div>
-                                        <div className="item">
-                                            <ExtLink link="/faculty" name="Faculty" />
+                                            <ExtLink link="https://instruo.tech/" name="Instruo" />
                                         </div>
                                     </div>
                                 </div>
@@ -80,12 +77,12 @@ const Footer = () => {
                             <div className="wrapper_right">
                                 <div className="Links" id="fixed_height">
                                     <div className="Title">Head of Dept</div>
-                                    <div style={{color: "red !important"}}>
+                                    <div>
                                         <div className="item" >Prof. Tuhina Samanta</div>
-                                        <div className="item">hod.it@faculty.iiests.ac.in</div>
-                                        <div className="item">hod@it.iiests.ac.in</div>
-                                        <div className="item">+91 33 2668 4561-63</div>
-                                        <div className="item">+91 33 2668 0521-25</div>
+                                        <div className="item-x">hod.it@faculty.iiests.ac.in</div>
+                                        <div className="item-x">hod@it.iiests.ac.in</div>
+                                        <div className="item-x">+91 33 2668 4561-63</div>
+                                        <div className="item-x">+91 33 2668 0521-25</div>
                                     </div>
                                 </div>
                             </div>
@@ -106,20 +103,32 @@ const Footer = () => {
                                     size="large"
                                     style={{ margin: "0.2rem" }}
                                     icon={<LinkedinOutlined style={{ fontSize: "1.3rem" }} />}
-                                ></Button>
+                                    href="https://www.linkedin.com/company/socit-iiests/posts/?feedView=all"
+                                    rel="noopener noreferrer"
+                                    target="blank"
+                                    ></Button>
                                 <Button
+                                    href="https://github.com/Soumyajit0803/SOCIT"
+                                    rel="noopener noreferrer"
+                                    target="blank"
                                     shape="circle"
                                     size="large"
                                     style={{ margin: "0.2rem" }}
                                     icon={<GithubOutlined style={{ fontSize: "1.3rem" }} />}
-                                ></Button>
+                                    ></Button>
                                 <Button
+                                    href="https://www.instagram.com/socit_iiests?igsh=MXIxNXc5NXdoaXlpdA=="
+                                    rel="noopener noreferrer"
+                                    target="blank"
                                     shape="circle"
                                     size="large"
                                     style={{ margin: "0.2rem" }}
                                     icon={<InstagramOutlined style={{ fontSize: "1.3rem" }} />}
-                                ></Button>
+                                    ></Button>
                                 <Button
+                                    href="mailto:hod@it.iiests.ac.in"
+                                    rel="noopener noreferrer"
+                                    target="blank"
                                     shape="circle"
                                     size="large"
                                     style={{ margin: "0.2rem" }}
@@ -159,22 +168,22 @@ const Footer = () => {
                                 <div className="Title">Head of Dept</div>
                                 <div id="details">
                                     <div className="item">Prof. Tuhina Samanta</div>
-                                    <div className="item">hod.it@faculty.iiests.ac.in</div>
-                                    <div className="item">hod@it.iiests.ac.in</div>
-                                    <div className="item">+91 33 2668 4561-63</div>
-                                    <div className="item">+91 33 2668 0521-25</div>
+                                    <div className="item-x">hod.it@faculty.iiests.ac.in</div>
+                                    <div className="item-x">hod@it.iiests.ac.in</div>
+                                    <div className="item-x">+91 33 2668 4561-63</div>
+                                    <div className="item-x">+91 33 2668 0521-25</div>
                                 </div>
                             </div>
                             <div className="Links" id="shift_right">
                                 <div className="Title">
-                                    Developers <GithubOutlined />
+                                    Developers
                                 </div>
                                 <Developer name="Soumyajit Karmakar" github="soumyajit0803" />
                                 <Developer name="Abhijit Karmakar" github="abhijit004" />
                                 <Developer name="Asif Tanvir" github="Asif-Tanvir-2006" />
                                 <Developer name="Satish Kumar Singh" github="a-sksingh113" />
-                                <Developer name="Prayas Sinha" github="sinpea" />
                                 <Developer name="Anshika Gupta" github="flex0ing-ag" />
+                                <Developer name="Prayas Sinha" github="sinpea" />
                             </div>
                         </div>
                     </div>

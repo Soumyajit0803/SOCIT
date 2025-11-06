@@ -51,7 +51,7 @@ export default function GalleryGrid({imgArrObj}){
             margin: "1rem 0",
             }} className="text_div_init">
                 <p>A good snap keeps a moment from running away</p>    
-                {true && <cite style={{ display: "block", marginTop: "0.5rem", fontStyle: "normal" }}>— {"Eudora Welty"}</cite>}
+                {true && <cite style={{ display: "block" }}>— {"Eudora Welty"}</cite>}
 
             </blockquote>
 

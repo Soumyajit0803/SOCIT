@@ -87,9 +87,9 @@ const AppDrawer = () => {
                     <NavLink to="/" isDrawer onClick={closeDrawer}>
                         Home
                     </NavLink>
-                    <NavLink to="/Events" isDrawer onClick={closeDrawer}>
+                    {/* <NavLink to="/Events" isDrawer onClick={closeDrawer}>
                         Events
-                    </NavLink>
+                    </NavLink> */}
                     <NavLink to="/Placement" isDrawer onClick={closeDrawer}>
                         Placement
                     </NavLink>
@@ -111,7 +111,7 @@ const Header = () => {
             <div className="hero">SOCIT</div>
             <div className="menu">
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/events">Events</NavLink>
+                {/* <NavLink to="/events">Events</NavLink> */}
                 <NavLink to="/placement">Placement</NavLink>
                 <NavLink to="/faculties">Faculties</NavLink>
                 <NavLink to="/gallery">Gallery</NavLink>

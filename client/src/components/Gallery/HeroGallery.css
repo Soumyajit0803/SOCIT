@@ -53,15 +53,6 @@
     border-right: 2px solid #93B256;
 }
 
-.Hero .middle .logo {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 150px;
-    min-height: 100px;
-    background: url(/assets/socit-logo-dark.png) no-repeat bottom/contain;
-}
-
 .Hero .middle .font {
     /* flex: 5; */
     font-size: 4rem;
