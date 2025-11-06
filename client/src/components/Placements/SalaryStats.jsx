@@ -19,8 +19,8 @@ export default function SalaryStats() {
             <div className="SalaryStats">
                 <div className="SalaryText">
                     Over the years, our students have consistently demonstrated exceptional talent, securing prestigious
-                    offers from leading organizations. These salary statistics reflect their dedication, skill, and the
-                    institute’s commitment to nurturing excellence in every domain of technology and innovation.
+                    offers from leading organizations. The salary statistics from 2025 report alongside reflect the dedication, skill, and the
+                    institute's commitment to nurturing excellence in every domain of technology and innovation.
                 </div>
                 <div className="salary-piechart">
                     <PieChart

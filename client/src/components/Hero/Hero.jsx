@@ -7,8 +7,8 @@ function Hero() {
         <div className="Hero">
           <div className="left">
             <div className="upper">
-              <h1>Our Mission</h1>
-              <div className="text"><p>Aim to provide quality education, foster innovation, and advance research in Information Technology.</p></div>
+              <h1></h1>
+              <div className="text"><p>Welcome to the web corner of SOCIT - Society of Information Technology, IIEST Shibpur.</p></div>
             </div>
             <div className="lower"></div>
           </div>
