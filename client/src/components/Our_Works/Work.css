@@ -30,6 +30,7 @@
         }
 
         .left {
+            
             padding: 0;
             min-width: min(40vw, 800px);
             .img-box {
@@ -78,7 +79,7 @@
                 
             }
             .left{
-                border: none;                
+                height: 70vh;              
             }
             #order_1{
                 order: 1;
@@ -91,14 +92,14 @@
                 min-width: calc(100vw - 3rem);
 
             }
-            .img-box {
+            /* .img-box {
                 background: url("/assets/bg-circuit.png");
                 min-height: 100%;
                 width: 100%;
                 background-size: cover;
                 background-position: center;
                 border: none;
-            }
+            } */
             .right p{
                 padding-bottom: 0;
 

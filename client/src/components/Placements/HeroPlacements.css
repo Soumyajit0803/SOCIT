@@ -61,7 +61,7 @@
     align-items: center;
     border-left: 2px solid #93B256;
     border-right: 2px solid #93B256;
-    background: rgba(0, 0, 0, 0.2) url(https://i.pinimg.com/736x/47/35/86/47358699fd89608f25de8a3c0d936bef.jpg) no-repeat center/cover;
+    background: rgba(0, 0, 0, 0.2) url(/assets/bg-circuit.png) no-repeat center/cover;
 }
 
 .Hero .middle .font {

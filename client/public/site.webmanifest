@@ -1,0 +1,43 @@
+{
+  "name": "socit",
+  "short_name": "socit",
+  "description": "SOCIT - the official club of the Information Technology Department at IIEST Shibpur",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "",
+      "sizes": "1920x878",
+      "type": "image/png",
+      "form_factor":"wide"
+    },
+    {
+      "src": "",
+      "sizes": "372x805",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "theme_color": "#76b100",
+  "background_color": "#202020",
+  "display": "standalone",
+  "start_url": "/"
+}

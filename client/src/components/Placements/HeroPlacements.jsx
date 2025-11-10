@@ -10,7 +10,7 @@ function Hero() {
               {/*<h1>Our Mission</h1>*/}
                 <div className="text">
                     <p>
-                        Our consistent placement record reflects the strength of our department and students.
+                        Our consistent placement record stands as a testament to the excellence of our department and the calibre of our students.
                     </p>
                 </div>
             </div>
@@ -28,8 +28,8 @@ function Hero() {
           <div className="right">
             <div className="upper"></div>
             <div className="lower">
-              <h1></h1>
-              <div className="text"><p>Top skills for recruiters include softare engineering, web/network expertise and various consultant positions.</p></div>
+              <h1>Top Skills</h1>
+              <div className="text"><p>Recruiters look for roles on softare engineering, web/network expertise and various consultant positions.</p></div>
             </div>
           </div>
         </div>
