@@ -7,8 +7,8 @@ const Hero = () => {
         <div className="Hero">
           <div className="left">
             <div className="upper">
-              <h1>Our Mission</h1>
-              <div className="text"><p>Aim to provide quality education, foster innovation, and advance research in Information Technology.</p></div>
+              <h1>Guiding Excellence</h1>
+              <div className="text"><p>A Distinguished Faculty Committed to Academic and Professional Growth.</p></div>
             </div>
             <div className="lower"></div>
           </div>

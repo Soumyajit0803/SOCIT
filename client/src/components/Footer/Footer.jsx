@@ -45,7 +45,7 @@ const Footer = () => {
                                         <br />
                                         IIEST, Shibpur
                                     </div>
-                                    <div className="address" style={{color: "var(--text-secondary) !important"}}>
+                                    <div className="address" style={{ color: "var(--text-secondary) !important" }}>
                                         Botanical garden area,
                                         <br />
                                         Shibpur, Howrah-700013
@@ -62,7 +62,10 @@ const Footer = () => {
                                             <ExtLink link="https://www.iiests.ac.in/" name="IIEST&nbsp;Shibpur" />
                                         </div>
                                         <div className="item">
-                                            <ExtLink link="https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT" name="About" />
+                                            <ExtLink
+                                                link="https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT"
+                                                name="About"
+                                            />
                                         </div>
                                         {/* <div className="item">
                                             <ExtLink link="https://github.com/Soumyajit0803/SOCIT" name="Github" />
@@ -78,7 +81,7 @@ const Footer = () => {
                                 <div className="Links" id="fixed_height">
                                     <div className="Title">Head of Dept</div>
                                     <div>
-                                        <div className="item" >Prof. Tuhina Samanta</div>
+                                        <div className="item">Prof. Tuhina Samanta</div>
                                         <div className="item-x">hod.it@faculty.iiests.ac.in</div>
                                         <div className="item-x">hod@it.iiests.ac.in</div>
                                         <div className="item-x">+91 33 2668 4561-63</div>
@@ -106,7 +109,7 @@ const Footer = () => {
                                     href="https://www.linkedin.com/company/socit-iiests/posts/?feedView=all"
                                     rel="noopener noreferrer"
                                     target="blank"
-                                    ></Button>
+                                ></Button>
                                 <Button
                                     href="https://github.com/Soumyajit0803/SOCIT"
                                     rel="noopener noreferrer"
@@ -115,7 +118,7 @@ const Footer = () => {
                                     size="large"
                                     style={{ margin: "0.2rem" }}
                                     icon={<GithubOutlined style={{ fontSize: "1.3rem" }} />}
-                                    ></Button>
+                                ></Button>
                                 <Button
                                     href="https://www.instagram.com/socit_iiests?igsh=MXIxNXc5NXdoaXlpdA=="
                                     rel="noopener noreferrer"
@@ -124,7 +127,7 @@ const Footer = () => {
                                     size="large"
                                     style={{ margin: "0.2rem" }}
                                     icon={<InstagramOutlined style={{ fontSize: "1.3rem" }} />}
-                                    ></Button>
+                                ></Button>
                                 <Button
                                     href="mailto:hod@it.iiests.ac.in"
                                     rel="noopener noreferrer"
@@ -159,10 +162,18 @@ const Footer = () => {
                         <div className="wrapper">
                             <div className="Links" id="ql">
                                 <div className="Title">Quick Links</div>
-                                <div className="item">Home</div>
-                                <div className="item">Placements</div>
-                                <div className="item">Events</div>
-                                <div className="item">Gallery</div>
+                                <div className="item">
+                                    <ExtLink link="https://www.iiests.ac.in/" name="IIEST&nbsp;Shibpur" />
+                                </div>
+                                <div className="item">
+                                    <ExtLink link="https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT" name="About" />
+                                </div>
+                                {/* <div className="item">
+                                            <ExtLink link="https://github.com/Soumyajit0803/SOCIT" name="Github" />
+                                        </div> */}
+                                <div className="item">
+                                    <ExtLink link="https://instruo.tech/" name="Instruo" />
+                                </div>
                             </div>
                             <div className="Links" id="fixed_height">
                                 <div className="Title">Head of Dept</div>
@@ -175,9 +186,7 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="Links" id="shift_right">
-                                <div className="Title">
-                                    Developers
-                                </div>
+                                <div className="Title">Developers</div>
                                 <Developer name="Soumyajit Karmakar" github="soumyajit0803" />
                                 <Developer name="Abhijit Karmakar" github="abhijit004" />
                                 <Developer name="Asif Tanvir" github="Asif-Tanvir-2006" />
