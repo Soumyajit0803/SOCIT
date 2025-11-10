@@ -1,4 +1,4 @@
-.button {
+.custom-button {
     border: 2px solid var(--green) !important;
     font-size: 1.2rem;
     line-height: 1;
@@ -35,7 +35,7 @@
     right: 10px;
   }
 
-  .button:hover {
+  .custom-button:hover {
     background: var(--green);
   }
 
@@ -44,12 +44,12 @@
     transform: translate(-150%, 150%);
   }
 
-  .button:hover .button__icon-svg:first-child {
+  .custom-button:hover .button__icon-svg:first-child {
     transition: transform 0.3s ease-in-out;
     transform: translate(150%, -150%);
   }
 
-  .button:hover .button__icon-svg--copy {
+  .custom-button:hover .button__icon-svg--copy {
     transition: transform 0.3s ease-in-out 0.1s;
     transform: translate(0);
   }
