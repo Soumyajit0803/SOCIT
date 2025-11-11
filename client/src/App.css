@@ -1,0 +1,95 @@
+
+.text-showup{
+  transform: translateX(0);
+}
+
+.hiderx{
+  opacity: 0;
+}
+
+.shower {
+  animation: entrance-1 0.7s ease 0s 1 normal forwards;
+}
+
+.right-to-left{
+  opacity: 0;
+  /* transform: translateX(30rem); */
+}
+
+.bulletshow{
+  animation: right-entry 1s ease 0s 1 normal forwards; 
+}
+
+.left-to-right{
+  opacity: 0;
+}
+
+.descend-show{
+  animation: left-entry 1s ease 0s 1 normal forwards;
+}
+.ascend-show{
+  opacity: 0;
+  animation: entrance-2 1s ease 0s 1 normal forwards;
+}
+
+@keyframes left-entry {
+  0% {
+    transform :translateX(-10rem);
+    opacity: 0;
+  }
+  50%{
+    transform :translateX(1rem);
+  }
+  100% {
+    transform :translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes right-entry {
+  0% {
+    transform :translateX(10rem);
+    opacity: 0;
+  }
+  50%{
+    transform :translateX(-1rem);
+  }
+  100% {
+    transform :translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bullet-anim {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes entrance-1 {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes entrance-2 {
+	0% {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

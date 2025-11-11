@@ -24,10 +24,10 @@ const HeroGallery = () => {
     return (
         <>
             <div className="Hero-Frame">
-                <div className="Hero">
+                <div className="Hero hiderx">
                     <div className="left">
                         <div
-                            className="upper"
+                            className="upper left-to-right"
                             style={{
                                 backgroundColor: "rgba(0, 0, 0, 0.2)",
                                 backgroundImage: `linear-gradient(rgba(0, 0, 0, ${imageList.left_u.alpha}),rgba(0, 0, 0, ${imageList.left_u.alpha})),url(${imageList.left_u.src})`,
@@ -39,12 +39,13 @@ const HeroGallery = () => {
                             <div>{/*<Image src={imageList.left_u.src}/>*/}</div>
                         </div>
                         <div
-                            className="lower"
+                            className="lower left-to-right"
                             style={{
                                 backgroundImage: `linear-gradient(rgba(0, 0, 0, ${imageList.left_d.alpha}),rgba(0, 0, 0, ${imageList.left_d.alpha})), url(${imageList.left_d.src})`,
                                 backgroundRepeat: "no-repeat",
                                 backgroundPosition: "center",
                                 backgroundSize: "cover",
+                                animationDelay: "0.2s",
                             }}
                         >
                             <div></div>
@@ -68,21 +69,23 @@ const HeroGallery = () => {
                     </div>
                     <div className="right">
                         <div
-                            className="upper"
+                            className="upper right-to-left"
                             style={{
                                 backgroundImage: `linear-gradient(rgba(0, 0, 0, ${imageList.right_u.alpha}),rgba(0, 0, 0, ${imageList.right_u.alpha})), url(${imageList.right_u.src})`,
                                 backgroundRepeat: "no-repeat",
                                 backgroundPosition: "center",
                                 backgroundSize: "cover",
+                                animationDelay: "0.4s"
                             }}
                         ></div>
                         <div
-                            className="lower"
+                            className="lower right-to-left"
                             style={{
                                 backgroundImage: `linear-gradient(rgba(0, 0, 0, ${imageList.right_d.alpha}),rgba(0, 0, 0, ${imageList.right_d.alpha})), url(${imageList.right_d.src})`,
                                 backgroundRepeat: "no-repeat",
                                 backgroundPosition: "center",
                                 backgroundSize: "cover",
+                                animationDelay: "0.6s"
                             }}
                         ></div>
                     </div>

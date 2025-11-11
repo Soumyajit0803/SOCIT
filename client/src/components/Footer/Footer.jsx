@@ -26,7 +26,7 @@ const ExtLink = ({ link, name }) => (
 const Footer = () => {
     return (
         <footer className="Footer-Frame">
-            <div className="Footer">
+            <div className="Footer hiderx">
                 <div className="Lower">
                     <div className="Left-Box">
                         <div className="Logo_mob">
@@ -46,7 +46,7 @@ const Footer = () => {
                         <div className="mob_middle">
                             <div className="wrapper_left">
                                 <div id="fixed_height">
-                                    <div className="Title">
+                                    <div className="Title left-to-right">
                                         <div className="fixedImage"></div>
                                         Society of Information
                                         <br />
@@ -54,7 +54,10 @@ const Footer = () => {
                                         <br />
                                         IIEST, Shibpur
                                     </div>
-                                    <div className="address" style={{ color: "var(--text-secondary) !important" }}>
+                                    <div
+                                        className="address left-to-right"
+                                        style={{ color: "var(--text-secondary) !important", animationDelay: "0.3s" }}
+                                    >
                                         Botanical garden area,
                                         <br />
                                         Shibpur, Howrah-700013
@@ -63,10 +66,14 @@ const Footer = () => {
                                     </div>
                                 </div>
                                 <div id="ql_mob_hidden">
-                                    <div className="Title" id="sec_title">
+                                    <div className="Title left-to-right" id="sec_title">
                                         Quick Links
                                     </div>
-                                    <div className="address" id="no_space">
+                                    <div
+                                        className="address left-to-right"
+                                        style={{ animationDelay: "0.3s" }}
+                                        id="no_space"
+                                    >
                                         <div className="item">
                                             <ExtLink link="https://www.iiests.ac.in/" name="IIEST&nbsp;Shibpur" />
                                         </div>
@@ -88,8 +95,8 @@ const Footer = () => {
                             <div id="breaker_line"></div>
                             <div className="wrapper_right">
                                 <div className="Links" id="fixed_height">
-                                    <div className="Title">Head of Dept</div>
-                                    <div>
+                                    <div className="Title right-to-left">Head of Dept</div>
+                                    <div className="right-to-left" style={{ animationDelay: "0.3s" }}>
                                         <div className="item">Prof. Tuhina Samanta</div>
                                         <div className="item-x">hod.it@faculty.iiests.ac.in</div>
                                         <div className="item-x">hod@it.iiests.ac.in</div>
@@ -150,7 +157,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="Right-Box">
-                        <div className="icons">
+                        <div className="icons hiderx" style={{animationDelay: "0.3s"}}>
                             <Button
                                 style={{ margin: "0.2rem" }}
                                 icon={<LinkedinOutlined style={{ fontSize: "13px" }} />}
@@ -170,23 +177,25 @@ const Footer = () => {
                         </div>
                         <div className="wrapper">
                             <div className="Links" id="ql">
-                                <div className="Title">Quick Links</div>
-                                <div className="item">
-                                    <ExtLink link="https://www.iiests.ac.in/" name="IIEST&nbsp;Shibpur" />
-                                </div>
-                                <div className="item">
-                                    <ExtLink link="https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT" name="About" />
-                                </div>
-                                {/* <div className="item">
+                                <div className="Title left-to-right">Quick Links</div>
+                                <div className="left-to-right" style={{ animationDelay: "0.3s" }}>
+                                    <div className="item">
+                                        <ExtLink link="https://www.iiests.ac.in/" name="IIEST&nbsp;Shibpur" />
+                                    </div>
+                                    <div className="item">
+                                        <ExtLink link="https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT" name="About" />
+                                    </div>
+                                    {/* <div className="item">
                                             <ExtLink link="https://github.com/Soumyajit0803/SOCIT" name="Github" />
                                         </div> */}
-                                <div className="item">
-                                    <ExtLink link="https://instruo.tech/" name="Instruo" />
+                                    <div className="item">
+                                        <ExtLink link="https://instruo.tech/" name="Instruo" />
+                                    </div>
                                 </div>
                             </div>
                             <div className="Links" id="fixed_height">
-                                <div className="Title">Head of Dept</div>
-                                <div id="details">
+                                <div className="Title right-to-left">Head of Dept</div>
+                                <div id="details right-to-left" style={{ animationDelay: "0.3s" }}>
                                     <div className="item">Prof. Tuhina Samanta</div>
                                     <div className="item-x">hod.it@faculty.iiests.ac.in</div>
                                     <div className="item-x">hod@it.iiests.ac.in</div>

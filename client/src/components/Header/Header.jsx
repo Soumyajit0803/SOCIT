@@ -13,19 +13,16 @@ const NavLink = ({ to, children, isDrawer = false, onClick }) => {
         <Link
             style={{
                 textDecoration: "none",
-                color: isDrawer 
-                    ? (isActive ? "var(--text-primary)" : "var(--green)")
-                    : 'inherit'
+                color: isDrawer ? (isActive ? "var(--text-primary)" : "var(--green)") : "inherit",
             }}
             onClick={onClick}
             to={to}
         >
-            {isDrawer 
-                ? <li>{children}</li>
-                : <div className={`menu-item${isActive ? " active-menu-item" : ""}`}>
-                    {children}
-                  </div>
-            }
+            {isDrawer ? (
+                <li>{children}</li>
+            ) : (
+                <div className={`menu-item${isActive ? " active-menu-item" : ""}`}>{children}</div>
+            )}
         </Link>
     );
 };
@@ -108,13 +105,20 @@ const AppDrawer = () => {
 const Header = () => {
     return (
         <header className="header">
-            <div className="hero">SOCIT</div>
+            <div className="hero top-to-bottom">SOCIT</div>
             <div className="menu">
-                <NavLink to="/">Home</NavLink>
-                {/* <NavLink to="/events">Events</NavLink> */}
-                <NavLink to="/placement">Placement</NavLink>
-                <NavLink to="/faculties">Faculties</NavLink>
-                <NavLink to="/gallery">Gallery</NavLink>
+                <NavLink to="/">
+                    <div className="top-to-bottom" style={{animationDelay: "0.1s"}}>Home</div>
+                </NavLink>
+                <NavLink to="/placement">
+                    <div className="top-to-bottom" style={{animationDelay: "0.2s"}}>Placement</div>
+                </NavLink>
+                <NavLink to="/faculties">
+                    <div className="top-to-bottom" style={{animationDelay: "0.3s"}}>Faculty</div>
+                </NavLink>
+                <NavLink to="/gallery">
+                    <div className="top-to-bottom" style={{animationDelay: "0.4s"}}>Gallery</div>
+                </NavLink>
             </div>
             <div className="drawer-button">
                 <AppDrawer />

@@ -22,10 +22,11 @@ const recruiterData = [
 export default function RecruitersCmp() {
     return (
         <section className="RecruitersCmp">
-            <div className="TitleText">Our Recruiters</div>
+            <div className="TitleText top-to-bottom">Our Recruiters</div>
             <div className="recGrid">
                 {recruiterData.map((company, index) => (
-                    <Tooltip title={company.name} key={index} placement="top" color="var(--green)">
+                    <div className="hiderx" style={{animationDelay:`${0.05*index}s`}} ><Tooltip title={company.name} key={index} placement="top" color="var(--green)">
+                        
                         <Card
                             hoverable
                             className="company-card"
@@ -37,7 +38,7 @@ export default function RecruitersCmp() {
                                 />
                             }
                         />
-                    </Tooltip>
+                    </Tooltip></div>
                 ))}
             </div>
         </section>

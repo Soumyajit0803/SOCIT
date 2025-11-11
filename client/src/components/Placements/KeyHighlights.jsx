@@ -11,12 +11,12 @@ export default function KeyHighlights(){
     }
     return(
         <>
-        <div className="TitleText">
+        <div className="TitleText hiderx">
             Key Highlights
         </div>
-        <div className="StatsContainer">
+        <div className="StatsContainer hiderx">
             <div className="Container ll">
-                <div className="data">
+                <div className="data right-to-left">
                     <div className="Value">
                         <span>
                             14
@@ -29,12 +29,12 @@ export default function KeyHighlights(){
                     </div>
                 </div>
 
-                <div className="SalaryType">
+                <div className="SalaryType left-to-right">
                     Average Salary
                 </div>
             </div>
             <div className="Container lc">
-                <div className="data">
+                <div className="data right-to-left" style={{ animationDelay: "0.2s" }}>
                     <div className="Value">
                         <span>
                             11
@@ -47,12 +47,12 @@ export default function KeyHighlights(){
                     </div>
                 </div>
 
-                <div className="SalaryType">
+                <div className="SalaryType left-to-right" style={{ animationDelay: "0.2s" }}>
                     Median Salary
                 </div>
             </div>
             <div className="Container rc">
-                <div className="data">
+                <div className="data right-to-left" style={{ animationDelay: "0.4s" }}>
                     <div className="Value">
                         <span>
                             55
@@ -65,12 +65,12 @@ export default function KeyHighlights(){
                     </div>
                 </div>
 
-                <div className="SalaryType">
+                <div className="SalaryType left-to-right" style={{ animationDelay: "0.4s" }}>
                     Highest Salary
                 </div>
             </div>
             <div className="Container rr">
-                <div className="data">
+                <div className="data right-to-left" style={{ animationDelay: "0.6s" }}>
                     <div className="Value">
                         <span>
                             80
@@ -83,7 +83,7 @@ export default function KeyHighlights(){
                     </div>
                 </div>
 
-                <div className="SalaryType">
+                <div className="SalaryType left-to-right" style={{ animationDelay: "0.6s" }}>
                     Students Placed
                 </div>
             </div>
