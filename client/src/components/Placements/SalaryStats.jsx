@@ -14,15 +14,17 @@ export default function SalaryStats() {
     
     return (
         <>
-            <div className="TitleText_SS">Salary Stats</div>
+            <div className="TitleText_SS">
+                <div className="left-to-right">Salary Stats</div>
+            </div>
 
             <div className="SalaryStats">
-                <div className="SalaryText">
+                <div className="SalaryText left-to-right" style={{ animationDelay: "0.3s" }}>
                     Over the years, our students have consistently demonstrated exceptional talent, securing prestigious
                     offers from leading organizations. The salary statistics from 2025 report alongside reflect the dedication, skill, and the
                     institute's commitment to nurturing excellence in every domain of technology and innovation.
                 </div>
-                <div className="salary-piechart">
+                <div className="salary-piechart right-to-left" style={{ animationDelay: "0.3s" }}>
                     <PieChart
                         series={[
                             {

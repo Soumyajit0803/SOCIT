@@ -3,12 +3,12 @@ import React from "react";
 const Hero = () => {
     return (
         <>
-          <div className="Hero-Frame">
+          <div className="Hero-Frame hiderx">
         <div className="Hero">
           <div className="left">
             <div className="upper">
-              <h1>Guiding Excellence</h1>
-              <div className="text"><p>A Distinguished Faculty Committed to Academic and Professional Growth.</p></div>
+              <h1 className="left-to-right">Guiding Excellence</h1>
+              <div className="text left-to-right" style={{ animationDelay: "0.3s" }}><p>A Distinguished Faculty Committed to Academic and Professional Growth.</p></div>
             </div>
             <div className="lower"></div>
           </div>
@@ -26,8 +26,8 @@ const Hero = () => {
           <div className="right">
             <div className="upper"></div>
             <div className="lower">
-              <h1>Highlights</h1>
-              <div className="text"><p>Top education, AI & cybersecurity research, industry ties, top labs, strong placements—empowering innovation.</p></div>
+              <h1 className="right-to-left">Highlights</h1>
+              <div className="text right-to-left" style={{ animationDelay: "0.3s" }}><p>Top education, AI & cybersecurity research, industry ties, top labs, strong placements—empowering innovation.</p></div>
             </div>
           </div>
         </div>

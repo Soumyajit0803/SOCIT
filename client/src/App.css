@@ -28,6 +28,7 @@
   animation: left-entry 1s ease 0s 1 normal forwards;
 }
 .ascend-show{
+  opacity: 0;
   animation: entrance-2 1s ease 0s 1 normal forwards;
 }
 

@@ -117,7 +117,7 @@ const Header = () => {
                     <div className="top-to-bottom" style={{animationDelay: "0.3s"}}>Faculty</div>
                 </NavLink>
                 <NavLink to="/gallery">
-                    <div className="top-to-bottom" style={{animationDelay: "0.4s"}}>Faculty</div>
+                    <div className="top-to-bottom" style={{animationDelay: "0.4s"}}>Gallery</div>
                 </NavLink>
             </div>
             <div className="drawer-button">

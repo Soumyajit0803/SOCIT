@@ -126,17 +126,19 @@ const OurFaculty = () => {
   return (
     <>
       <div className="content-wrapper-1">
-        <div className="topic-1">Our Esteemed Faculty</div>
+        <div className="topic-1 hiderx">
+          <div className="top-to-bottom">Our Esteemed Faculty</div>
+        </div>
         <div className="grid-1">
-          {facultyData.map((faculty) => (
+          {facultyData.map((faculty, index) => (
             <div key={faculty.id} className="faculty-1">
               <div className="faculty-image">
-                <img src={faculty.image || "/placeholder.svg"} alt={faculty.name} />
+                <img className="hiderx" style={{animationDelay: `${0.05*index}s`}} src={faculty.image || "/placeholder.svg"} alt={faculty.name} />
               </div>
               <div className="faculty-content">
-                <h3 className="faculty-name">{faculty.name}</h3>
-                <p className="faculty-designation">{faculty.designation}</p>
-                <div className="faculty-contact">
+                <h3 className="faculty-name left-to-right" style={{animationDelay: `${0.05*index}s`}}>{faculty.name}</h3>
+                <p className="faculty-designation left-to-right" style={{animationDelay: `${0.05*index}s`}}>{faculty.designation}</p>
+                <div className="faculty-contact left-to-right" style={{animationDelay: `${0.05*index}s`}}>
                   {faculty.phone && (
                     <div className="contact-item">
                       <FaPhoneAlt className="icon" /> {faculty.phone}
@@ -145,12 +147,12 @@ const OurFaculty = () => {
                   
 
                   {faculty.emails.map((email, index) => (
-                    <div key={index} className="contact-item">
+                    <div key={index} className="contact-item left-to-right" style={{animationDelay: `${0.05*index}s`}}>
                       <FaEnvelope className="icon" /> {email}
                     </div>
                   ))}
                 </div>
-                <a href={faculty.page} className="learn-more">
+                <a href={faculty.page} className="learn-more left-to-right" style={{animationDelay: `${0.05*index}s`}}>
                   Learn More
                 </a>
               </div>

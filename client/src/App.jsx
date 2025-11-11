@@ -8,7 +8,8 @@ import { ConfigProvider, theme } from "antd";
 
 // for MUI dark mode
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
+import { useLocation } from "react-router-dom";
+
 
 const darkTheme = createTheme({
     palette: {
@@ -17,6 +18,7 @@ const darkTheme = createTheme({
 });
 
 function App() {
+    const location = useLocation();
     const observer = useRef(null);
     const bullets = useRef(null);
     const descend = useRef(null);
@@ -53,7 +55,7 @@ function App() {
             bullets.current.disconnect();
             descend.current.disconnect();
         };
-    }, []);
+    }, [location.pathname]);
     const slider = (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -103,11 +105,9 @@ function App() {
                         boxShadow: "inset 0 0 0 2px var(--green)",
                     }}
                 >
-                    <BrowserRouter>
                         <AppHeader />
                         <AllRoutes />
                         <Footer />
-                    </BrowserRouter>
                 </div>
             </ThemeProvider>
         </ConfigProvider>

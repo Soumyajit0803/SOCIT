@@ -1,32 +1,3 @@
-// import React from 'react'
-// import "./Project.css"
-
-// const Project = () => {
-//   return (
-//     <>
-//    <div className="content-wrapper-2">
-//         <div className="topic-2">Projects</div>
-//         <div className="grid-2">
-//           <div className="project-1"><p>Some very very long complicated cool-looking project name</p></div>
-//           <div className="project-1"></div>
-//           <div className="project-1"></div>
-//           <div className="project-1"></div>
-//           <div className="project-1"></div>
-//           <div className="project-1"></div>
-//           <div className="project-1"></div>
-//           <div className="project-1"></div>
-       
-//         </div>
-//          <div className="list"><a href="">See full list</a></div>
-//       </div>
-
-//     </>
-//   )
-// }
-
-// export default Project
-
-
 import React, { useState } from "react";
 import "./Project.css";
 import { projectData } from "./ProjectData";
@@ -39,29 +10,31 @@ const Project = () => {
 
   return (
     <div className="content-wrapper-2">
-      <div className="topic-2">Projects</div>
+      <div className="topic-2">
+        <div className="hiderx">Projects</div>
+      </div>
       
       <div className="grid-2">
-        {projectsToShow.map((proj) => (
+        {projectsToShow.map((proj, index) => (
           <div key={proj.id} className="project-1">
-            <p className="project-title">{proj.id}. {proj.title}</p>
+            <p className="project-title left-to-right" style={{animationDelay: `${0.05*index}s`}}>{proj.id}. {proj.title}</p>
             {proj.fundingAgent && (
-              <p className="project-detail">
+              <p className="project-detail left-to-right" style={{animationDelay: `${0.05*index}s`}}>
                 <strong>Funding Agent:</strong> {proj.fundingAgent}
               </p>
             )}
             {proj.pi && (
-              <p className="project-detail">
+              <p className="project-detail left-to-right" style={{animationDelay: `${0.05*index}s`}}>
                 <strong>PI:</strong> {proj.pi}
               </p>
             )}
             {proj.coPi && (
-              <p className="project-detail">
+              <p className="project-detail left-to-right" style={{animationDelay: `${0.05*index}s`}}>
                 <strong>Co-PI:</strong> {proj.coPi}
               </p>
             )}
             {proj.duration && (
-              <p className="project-detail">
+              <p className="project-detail left-to-right" style={{animationDelay: `${0.05*index}s`}}>
                 <strong>Duration:</strong> {proj.duration}
               </p>
             )}
@@ -70,7 +43,7 @@ const Project = () => {
       </div>
 
         <a
-          className="see-full-btn"
+          className="see-full-btn left-to-right"
           onClick={() => window.open("https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT", "_blank")}
         >
           See Full list
