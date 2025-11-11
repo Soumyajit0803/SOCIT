@@ -33,7 +33,7 @@
         .left {
             padding: 0;
             min-width: min(40vw, 800px);
-            height: 70vh;
+            height: 80vh;
             .img-box {
                 background: url("/assets/gallery/gallery-x-2.webp");
                 background-size: cover;
@@ -52,7 +52,7 @@
             align-items: flex-end;
             justify-content: start;
             flex-direction: column;
-            height: 70vh;
+            height: 80vh;
 
             text-align: right;
         }

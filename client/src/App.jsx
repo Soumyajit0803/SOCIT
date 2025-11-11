@@ -20,12 +20,14 @@ function App() {
     const observer = useRef(null);
     const bullets = useRef(null);
     const descend = useRef(null);
+    const ascend = useRef(null);
 
     useEffect(() => {
         // Initialize IntersectionObserver when the component mounts
         observer.current = new IntersectionObserver(slider, { threshold: 0.6 });
         bullets.current = new IntersectionObserver(bulletSlider, { threshold: 0.6 });
         descend.current = new IntersectionObserver(descendSlider, { threshold: 0.6 });
+        ascend.current = new IntersectionObserver(ascendSlider, { threshold: 0.6 });
 
         // Fetching all boxes and setting them on observe by the observer object
         const boxes = document.querySelectorAll(".hiderx");
@@ -39,6 +41,10 @@ function App() {
         const descendBoxes = document.querySelectorAll(".left-to-right");
         descendBoxes.forEach((box) => {
             descend.current.observe(box);
+        });
+        const ascendBoxes = document.querySelectorAll(".top-to-bottom");
+        ascendBoxes.forEach((box) => {
+            ascend.current.observe(box);
         });
 
         // Cleanup function to disconnect the observer when the component unmounts
@@ -68,6 +74,14 @@ function App() {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("descend-show");
+                // console.log("Fire the animation!");
+            }
+        });
+    };
+    const ascendSlider = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("ascend-show");
                 // console.log("Fire the animation!");
             }
         });
