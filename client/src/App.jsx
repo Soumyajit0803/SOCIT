@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useEffect, useRef} from "react";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import AllRoutes from "./Routes";
@@ -17,6 +17,61 @@ const darkTheme = createTheme({
 });
 
 function App() {
+    const observer = useRef(null);
+    const bullets = useRef(null);
+    const descend = useRef(null);
+
+    useEffect(() => {
+        // Initialize IntersectionObserver when the component mounts
+        observer.current = new IntersectionObserver(slider, { threshold: 0.6 });
+        bullets.current = new IntersectionObserver(bulletSlider, { threshold: 0.6 });
+        descend.current = new IntersectionObserver(descendSlider, { threshold: 0.6 });
+
+        // Fetching all boxes and setting them on observe by the observer object
+        const boxes = document.querySelectorAll(".hiderx");
+        boxes.forEach((box) => {
+            observer.current.observe(box);
+        });
+        const bulletBoxes = document.querySelectorAll(".right-to-left");
+        bulletBoxes.forEach((box) => {
+            bullets.current.observe(box);
+        });
+        const descendBoxes = document.querySelectorAll(".left-to-right");
+        descendBoxes.forEach((box) => {
+            descend.current.observe(box);
+        });
+
+        // Cleanup function to disconnect the observer when the component unmounts
+        return () => {
+            observer.current.disconnect();
+            bullets.current.disconnect();
+            descend.current.disconnect();
+        };
+    }, []);
+    const slider = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("shower");
+                // console.log("Fire the animation!");
+            }
+        });
+    };
+    const bulletSlider = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("bulletshow");
+                // console.log("Fire the animation!");
+            }
+        });
+    };
+    const descendSlider = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("descend-show");
+                // console.log("Fire the animation!");
+            }
+        });
+    };
     return (
         <ConfigProvider
             theme={{
