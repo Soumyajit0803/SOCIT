@@ -1,8 +1,17 @@
 import React from "react";
 import "./Footer.css";
-import { Button } from "antd";
+import { Button, Avatar, Tooltip } from "antd";
 import { LinkedinOutlined, GithubOutlined, InstagramOutlined, MailOutlined, SendOutlined } from "@ant-design/icons";
 import CustomButton from "../CustomButton/CustomButton";
+
+const contributors = [
+    { name: "Soumyajit Karmakar", username: "soumyajit0803" },
+    { name: "Abhijit Karmakar", username: "abhijit004" },
+    { name: "Asif Tanvir", username: "Asif-Tanvir-2006" },
+    { name: "Satish Kumar Singh", username: "a-sksingh113" },
+    { name: "Anshika Gupta", username: "flex0ing-ag" },
+    { name: "Prayas Sinha", username: "sinpea" },
+];
 
 const Developer = ({ name, github }) => (
     <div className="developer">
@@ -187,12 +196,29 @@ const Footer = () => {
                             </div>
                             <div className="Links" id="shift_right">
                                 <div className="Title">Developers</div>
-                                <Developer name="Soumyajit Karmakar" github="soumyajit0803" />
+                                {/* <Developer name="Soumyajit Karmakar" github="soumyajit0803" />
                                 <Developer name="Abhijit Karmakar" github="abhijit004" />
                                 <Developer name="Asif Tanvir" github="Asif-Tanvir-2006" />
                                 <Developer name="Satish Kumar Singh" github="a-sksingh113" />
                                 <Developer name="Anshika Gupta" github="flex0ing-ag" />
-                                <Developer name="Prayas Sinha" github="sinpea" />
+                                <Developer name="Prayas Sinha" github="sinpea" /> */}
+                                <Avatar.Group style={{marginTop: '1rem'}}>
+                                    {contributors.map(({ name, username }) => (
+                                        <Tooltip title={name} key={username}>
+                                            <a
+                                                href={`https://github.com/${username}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <Avatar
+                                                    size={40}
+                                                    src={`https://github.com/${username}.png`}
+                                                    alt={name}
+                                                />
+                                            </a>
+                                        </Tooltip>
+                                    ))}
+                                </Avatar.Group>
                             </div>
                         </div>
                     </div>
