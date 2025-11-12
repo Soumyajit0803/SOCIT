@@ -60,7 +60,7 @@ const Footer = () => {
                                     >
                                         Botanical garden area,
                                         <br />
-                                        Shibpur, Howrah-700013
+                                        Shibpur, Howrah-711103
                                         <br />
                                         West bengal
                                     </div>

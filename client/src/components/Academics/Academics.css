@@ -4,7 +4,6 @@
     justify-content: center;
     flex-direction: column;
 
-
     .topic {
         padding: 0.7rem 1rem;
         border: 2px solid var(--green);
@@ -12,15 +11,15 @@
         font-size: 2rem;
         display: flex;
         justify-content: flex-end;
-        
     }
 
-    .content{
+    .content {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        .left, .right {
+        .left,
+        .right {
             /* flex: 1; */
             width: 50%;
             height: 100%;
@@ -29,11 +28,10 @@
             font-size: 1.2rem;
         }
 
-
         .left {
             padding: 0;
             min-width: min(40vw, 800px);
-            height: 80vh;
+            height: 700px;
             .img-box {
                 background: url("/assets/gallery/gallery-x-2.webp");
                 background-size: cover;
@@ -44,7 +42,7 @@
             }
         }
 
-        .right p{
+        .right p {
             padding-bottom: 2rem;
         }
         .right {
@@ -52,21 +50,52 @@
             align-items: flex-end;
             justify-content: start;
             flex-direction: column;
-            height: 80vh;
-
+            height: 700px;
             text-align: right;
+
+            .semester-links {
+                display: flex;
+                justify-content: right;
+                flex-wrap: wrap;
+                gap: 0;
+
+                a {
+                    text-decoration: none !important;
+                }
+
+                .sem {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 10ch;
+                    border: 2px solid var(--green);
+                    margin-left: -2px;
+                    margin-top: -2px;
+                    padding: 0.5rem;
+                    transition: all 0.3s ease;
+                }
+
+                .sem:hover {
+                    background-color: var(--green);
+                    color: var(--black);
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
 
 @media only screen and (max-width: 1000px) {
     .academics-wrapper {
-        .content{
+        .content {
             flex-direction: column;
             height: auto;
             flex-flow: wrap-reverse;
 
-            .left, .right {
+            .left,
+            .right {
                 width: 100%;
                 height: auto;
             }
@@ -77,7 +106,8 @@
 
             .right {
                 align-items: flex-end;
-                text-align: right;            }
+                text-align: right;
+            }
         }
     }
 }

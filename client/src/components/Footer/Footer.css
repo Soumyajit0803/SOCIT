@@ -214,7 +214,7 @@
 }
 
 .ant-avatar-group:hover a {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     margin-left: 3px;
 }
 
