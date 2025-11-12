@@ -2,6 +2,17 @@ import React from "react";
 import "./Academics.css";
 import CustomButton from "../CustomButton/CustomButton";
 
+const semesterLinks = [
+    "https://example.com/semester1",
+    "https://example.com/semester2",
+    "https://example.com/semester3",
+    "https://example.com/semester4",
+    "https://example.com/semester5",
+    "https://example.com/semester6",
+    "https://example.com/semester7",
+    "https://example.com/semester8",
+];
+
 const Academics = () => {
     return (
         <div className="academics-wrapper hiderx">
@@ -24,7 +35,15 @@ const Academics = () => {
                         problem-solving, and interdisciplinary learning, ensuring that graduates are well-equipped to
                         tackle real-world challenges.
                     </p>
-                    <div className="right-to-left" style={{ animationDelay: "0.4s" }}>
+                    <div className="semester-links right-to-left" style={{ animationDelay: "0.3s" }}>
+                        {semesterLinks.map((link, index) => (
+                            <a href={link} target="_blank" rel="noopener noreferrer">
+                                <div className="sem">Semester {index + 1}</div>
+                            </a>
+                        ))}
+                    </div>
+
+                    <div className="right-to-left" style={{ animationDelay: "0.4s", marginTop: "20px" }}>
                         <CustomButton text="Academic corner" url={"https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT"} />
                     </div>
                 </div>
