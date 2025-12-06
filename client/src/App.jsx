@@ -1,4 +1,4 @@
-import React ,{useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import AllRoutes from "./Routes";
@@ -9,7 +9,7 @@ import { ConfigProvider, theme } from "antd";
 // for MUI dark mode
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useLocation } from "react-router-dom";
-
+import SmoothScroll from "./SmoothScroll";
 
 const darkTheme = createTheme({
     palette: {
@@ -97,19 +97,21 @@ function App() {
                 },
             }}
         >
-            <ThemeProvider theme={darkTheme}>
-                <div
-                    className="app"
-                    style={{
-                        margin: "var(--appmargin)",
-                        boxShadow: "inset 0 0 0 2px var(--green)",
-                    }}
-                >
+            <SmoothScroll>
+                <ThemeProvider theme={darkTheme}>
+                    <div
+                        className="app"
+                        style={{
+                            margin: "var(--appmargin)",
+                            boxShadow: "inset 0 0 0 2px var(--green)",
+                        }}
+                    >
                         <AppHeader />
                         <AllRoutes />
                         <Footer />
-                </div>
-            </ThemeProvider>
+                    </div>
+                </ThemeProvider>
+            </SmoothScroll>
         </ConfigProvider>
     );
 }
