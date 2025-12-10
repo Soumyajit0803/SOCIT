@@ -3,6 +3,7 @@ import "./Footer.css";
 import { Button, Avatar, Tooltip } from "antd";
 import { LinkedinOutlined, GithubOutlined, InstagramOutlined, MailOutlined, SendOutlined } from "@ant-design/icons";
 import CustomButton from "../CustomButton/CustomButton";
+import FooterAnim from "../FooterAnim/FooterAnim";
 
 const contributors = [
     { name: "Soumyajit Karmakar", username: "soumyajit0803" },
@@ -107,8 +108,9 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="Mid-Box">
-                        <div className="Image"></div>
+                    <div className="Mid-Box" style={{ position: "relative" }}>
+                        {/* <div className="Image"></div> */}
+                        <FooterAnim />
                         {/* <button className="more_button">
                             <div className="text">More Info</div>
                             {<SendOutlined style={{ fontSize: "1.5rem" }} />}
@@ -157,7 +159,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="Right-Box">
-                        <div className="icons hiderx" style={{animationDelay: "0.3s"}}>
+                        <div className="icons hiderx" style={{ animationDelay: "0.3s" }}>
                             <Button
                                 style={{ margin: "0.2rem" }}
                                 icon={<LinkedinOutlined style={{ fontSize: "13px" }} />}
@@ -211,7 +213,7 @@ const Footer = () => {
                                 <Developer name="Satish Kumar Singh" github="a-sksingh113" />
                                 <Developer name="Anshika Gupta" github="flex0ing-ag" />
                                 <Developer name="Prayas Sinha" github="sinpea" /> */}
-                                <Avatar.Group style={{marginTop: '1rem'}}>
+                                <Avatar.Group style={{ marginTop: "1rem" }}>
                                     {contributors.map(({ name, username }) => (
                                         <Tooltip title={name} key={username}>
                                             <a
