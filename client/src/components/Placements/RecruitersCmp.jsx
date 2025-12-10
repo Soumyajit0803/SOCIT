@@ -1,5 +1,6 @@
 import { Card, Tooltip } from "antd";
 import "./RecruitersCmp.css";
+import AutoCarousel from "../AutoCarousel/AutoCarousel";
 const recruiterData = [
     { key: "google", name: "Google" },
     { key: "microsoft", name: "Microsoft" },
@@ -17,13 +18,13 @@ const recruiterData = [
     { key: "natwest", name: "NatWest Group" },
     { key: "jktech", name: "JK Tech" },
     { key: "hcl", name: "HCL Tech" },
-    { key: "tcs", name: "Tata Consultancy Services (TCS)" }
+    { key: "tcs", name: "Tata Consultancy Services" }
 ];
 export default function RecruitersCmp() {
     return (
         <section className="RecruitersCmp">
             <div className="TitleText top-to-bottom">Our Recruiters</div>
-            <div className="recGrid">
+            {/* <div className="recGrid">
                 {recruiterData.map((company, index) => (
                     <div className="hiderx" style={{animationDelay:`${0.05*index}s`}} ><Tooltip title={company.name} key={index} placement="top" color="var(--green)">
                         
@@ -40,7 +41,8 @@ export default function RecruitersCmp() {
                         />
                     </Tooltip></div>
                 ))}
-            </div>
+            </div> */}
+            <AutoCarousel companies={recruiterData} />
         </section>
     );
 }

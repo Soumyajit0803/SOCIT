@@ -1,0 +1,83 @@
+.list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    width: calc(100% - 4px);
+    overflow: hidden;
+    padding: 1rem !important;
+    margin-bottom: 2rem;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 90%, transparent 100%);
+
+    /* Standard property for future support */
+    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 90%, transparent 100%);
+}
+.list .list-scroller {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.list .list-scroller .artist .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list .list-scroller .companycard {
+    height: 200px;
+    width: 250px;
+    border-left: 1px solid var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list .list-scroller .companycard .logo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    padding: 1rem;
+}
+
+.list .list-scroller .companycard .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.list .list-scroller .companycard .company-name {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* TOP-LEFT CORNER */
+.list .list-scroller .companycard .logo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px; /* Length of the horizontal line */
+    height: 30px; /* Length of the vertical line */
+    border-top: 1px solid var(--green);
+    border-left: 1px solid var(--green);
+}
+
+/* BOTTOM-RIGHT CORNER */
+.list .list-scroller .companycard .logo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-bottom: 1px solid var(--green);
+    border-right: 1px solid var(--green);
+}
+
+.list .list-scroller {
+    animation: infinitescroll 20s linear infinite;
+}
