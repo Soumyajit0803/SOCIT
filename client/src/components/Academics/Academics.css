@@ -67,7 +67,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 10ch;
+                    width: 12ch;
                     border: 2px solid var(--green);
                     margin-left: -2px;
                     margin-top: -2px;

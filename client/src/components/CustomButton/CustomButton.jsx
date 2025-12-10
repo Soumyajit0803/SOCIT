@@ -10,7 +10,7 @@ const CustomButton = ({ text, url }) => {
         }
     };
     return (
-        <button href="#" className="custom-button" style={{ "-clr": "var(--green)" }} onClick={handleClick}>
+        <button href="#" className="custom-button" style={{ "-clr": "var(--green)", width: 'max-content' }} onClick={handleClick}>
             {text}
             <span className="button__icon-wrapper">
                 <svg

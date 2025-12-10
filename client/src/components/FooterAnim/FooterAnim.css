@@ -1,0 +1,68 @@
+.anim-container {
+  position: relative;
+  width: 100%;
+  /* Initialize variables */
+  --x: 50%;
+  --y: 50%;
+  --r: 0px; /* Radius is 0 initially (hidden) */
+  height: 100%;
+  margin-top: 2rem;
+}
+
+.anim-container .anim-layer {
+  width: 100% !important;
+  /* display: block; */
+  pointer-events: none; /* Crucial: lets mouse events hit the container */
+  user-select: none;
+}
+
+.anim-container .anim-layer img {
+    width: 100% !important;
+    display: block;
+}
+
+
+/* BOTTOM LAYER: The Normal Image */
+/* Position relative ensures the container takes the height of this image */
+/* Update these specific classes in FooterAnim.css */
+
+/* 1. SKELETON (Now the background) */
+.anim-container .anim-layer.water {
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Send to back */
+    opacity: 1; 
+    
+    /* Remove clip-path from here. It is just a static background now. */
+    clip-path: none; 
+    
+    /* Keep your distortion filter */
+    filter: url(#water-filter); 
+}
+
+/* 2. NORMAL (Now the foreground with the hole) */
+.anim-container .anim-layer.normal {
+    position: relative; /* Keeps container height */
+    z-index: 2; /* Sit on top */
+    background-color: var(--black);
+    padding: 1rem;
+    
+    /* THE TWEAK: Create a hole */
+    /* transparent = the hole (shows skeleton) */
+    /* black = the visible part (shows skin) */
+    -webkit-mask-image: radial-gradient(
+        circle at var(--x) var(--y), 
+        transparent var(--r), 
+        black calc(var(--r) + 2px)
+    );
+    mask-image: radial-gradient(
+        circle at var(--x) var(--y), 
+        transparent var(--r), 
+        black calc(var(--r) + 2px)
+    );
+    
+    /* Optimization */
+    will-change: mask-image;
+}
