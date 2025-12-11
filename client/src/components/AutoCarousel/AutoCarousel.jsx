@@ -1,5 +1,5 @@
 import React from "react";
-import "./Autocarousel.css";
+import "./AutoCarousel.css";
 import { Tooltip, Card } from "antd";
 
 const CompanyCard = ({ name, img }) => {
