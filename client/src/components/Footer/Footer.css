@@ -1,11 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-.Footer-Frame {
-    font-family: "Arsenal", sans-serif;
-    color: white;
-    background-color: #1C1917;
-    height: fit-content;
-}
 
 .Footer-Frame .Footer {
     border: 2px solid var(--green);
@@ -280,11 +273,12 @@
     }
 
     .Footer-Frame .Footer .Lower .Left-Box .Logo_mob {
-        display: block;
-        background: url(/assets/socit-green.webp) no-repeat top/contain;
-        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
         min-height: 70vw;
-        margin: auto;
         position: relative;
     }
 

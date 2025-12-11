@@ -30,19 +30,47 @@ const Footer = () => {
             <div className="Footer hiderx">
                 <div className="Lower">
                     <div className="Left-Box">
-                        <div className="Logo_mob">
-                            <div className="Image"></div>
-                            {/* <button className="more_button_mob">
-                                <div className="text">More Info</div>
-                                {<SendOutlined style={{ fontSize: "1.5rem" }} />}
-                            </button> */}
-                            <Button
-                                iconPosition="end"
-                                icon={<SendOutlined style={{ fontSize: "1.5rem" }} />}
-                                className="more_button_mob"
-                            >
-                                More Info
-                            </Button>
+                        <div className="Logo_mob" >
+                            <FooterAnim />
+                            <CustomButton text="More Info" url={"https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT"} />
+                            <div style={{ margin: "1rem 0 1rem 0" }}>
+                                <Button
+                                    shape="circle"
+                                    size="large"
+                                    style={{ margin: "0.2rem" }}
+                                    icon={<LinkedinOutlined style={{ fontSize: "1.3rem" }} />}
+                                    href="https://www.linkedin.com/company/socit-iiests/posts/?feedView=all"
+                                    rel="noopener noreferrer"
+                                    target="blank"
+                                ></Button>
+                                <Button
+                                    href="https://github.com/Soumyajit0803/SOCIT"
+                                    rel="noopener noreferrer"
+                                    target="blank"
+                                    shape="circle"
+                                    size="large"
+                                    style={{ margin: "0.2rem" }}
+                                    icon={<GithubOutlined style={{ fontSize: "1.3rem" }} />}
+                                ></Button>
+                                <Button
+                                    href="https://www.instagram.com/socit_iiests?igsh=MXIxNXc5NXdoaXlpdA=="
+                                    rel="noopener noreferrer"
+                                    target="blank"
+                                    shape="circle"
+                                    size="large"
+                                    style={{ margin: "0.2rem" }}
+                                    icon={<InstagramOutlined style={{ fontSize: "1.3rem" }} />}
+                                ></Button>
+                                <Button
+                                    href="mailto:hod@it.iiests.ac.in"
+                                    rel="noopener noreferrer"
+                                    target="blank"
+                                    shape="circle"
+                                    size="large"
+                                    style={{ margin: "0.2rem" }}
+                                    icon={<MailOutlined style={{ fontSize: "1.3rem" }} />}
+                                ></Button>
+                            </div>
                         </div>
                         <div className="mob_middle">
                             <div className="wrapper_left">

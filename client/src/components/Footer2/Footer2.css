@@ -1,0 +1,186 @@
+.socit-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: var(--appborder);
+}
+
+.socit-footer .for-mob {
+    display: none;
+}
+
+.socit-footer .always {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.socit-footer .always .left,
+.socit-footer .always .right {
+    min-width: 240px;
+    max-width: 240px;
+}
+.socit-footer .always .mid {
+    width: 100%;
+}
+
+.socit-footer .always .left {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.socit-footer .always .left .clg,
+.socit-footer .always .right .contri .heading {
+    font-size: min(6vw, 25px);
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+.socit-footer .always .left .loc {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.2em;
+    font-weight: 300;
+}
+
+.socit-footer .always .left .quick-links {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 2rem;
+}
+
+.socit-footer .always .mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    border-left: var(--appborder);
+}
+
+.socit-footer .always .right {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-left: var(--appborder);
+}
+
+.socit-footer .always .right .hod {
+    line-height: 1.2em;
+    font-size: min(4vw, 16px);
+    font-weight: 200;
+}
+
+.socit-footer .always .right .hodname {
+    font-size: 1.5rem;
+    margin: 0.3rem 0 1rem 0;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.socit-footer .always .right .hodinfo {
+    font-size: min(4vw, 16px);
+    color: var(--text-secondary);
+    line-height: 1.5em;
+    font-weight: 300;
+}
+
+.socit-footer .always .right .contri {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.socit-footer .copyright {
+    font-size: min(4vw, 16px);
+    color: var(--text-secondary);
+    width: 100%;
+    text-align: center;
+    border-top: var(--appborder);
+    padding: 2rem;
+    font-weight: 300;
+}
+
+.extlink a {
+    color: var(--green);
+    text-decoration: none;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.extlink a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0px;
+    transition: all 0.3s ease;
+    background-color: var(--green);
+}
+
+.extlink a:hover:before {
+    width: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+    .socit-footer .always {
+        .mid {
+            display: none;
+        }
+
+        .left,
+        .right {
+            min-width: 50%;
+            max-width: 50%;
+            align-items: start;
+        }
+
+        .right {
+            align-items: end;
+            text-align: right;
+            .contri {
+                align-items: end;
+            }
+        }
+    }
+    .socit-footer .for-mob {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: var(--appborder);
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .socit-footer .always {
+        flex-direction: column;
+
+        .left,
+        .right {
+            min-width: 100%;
+            max-width: 100%;
+            align-items: start;
+            text-align: left;
+            border-left: none;
+            border-top: var(--appborder);
+            .contri {
+                align-items: start;
+                margin-top: 1rem;
+                width: 100%;
+            }
+        }
+    }
+    .socit-footer .always .left .quick-links {
+        display: none;
+    }
+}

@@ -27,7 +27,8 @@ html{
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+    --appborder: 2px solid var(--green);
+
     --black: #1c1917;
     --green: #93b256;
     --text-primary: white;

@@ -3,7 +3,8 @@ import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import AllRoutes from "./Routes";
 import AppHeader from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
+import Footer2 from "./components/Footer2/Footer2";
 import { ConfigProvider, theme } from "antd";
 
 // for MUI dark mode
@@ -108,7 +109,7 @@ function App() {
                     >
                         <AppHeader />
                         <AllRoutes />
-                        <Footer />
+                        <Footer2 />
                     </div>
                 </ThemeProvider>
             </SmoothScroll>
