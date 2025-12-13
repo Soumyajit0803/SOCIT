@@ -1,5 +1,11 @@
 import "./OurFaculty.css";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect, useRef } from "react";
+// Assuming FacultyCard, facultyData, FaPhoneAlt, FaEnvelope are available
+
+gsap.registerPlugin(ScrollTrigger);
 // Faculty data structure - easily replaceable
 const facultyData = [
     {
@@ -157,28 +163,57 @@ const FacultyCard = ({ faculty }) => {
 };
 
 const OurFaculty = () => {
+    const sectionRef = useRef(null);
+    const triggerRef = useRef(null);
+    useLayoutEffect(() => {
+        const getScrollAmount = () => {
+            let elementWidth = triggerRef.current.scrollWidth;
+            // Use the container's width instead of window.innerWidth to exclude scrollbar
+            let containerWidth = sectionRef.current.offsetWidth;
+
+            return -(elementWidth - containerWidth);
+        };
+        const pin = gsap.fromTo(
+            triggerRef.current,
+            { x: 0 },
+            {
+                x: getScrollAmount, // Use the function here for responsiveness
+                ease: "none",
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top top",
+                    end: "3000 top", // Increase this number if you want the scroll to feel slower
+                    scrub: 0.2,
+                    pin: true,
+                    invalidateOnRefresh: true, // IMPORTANT: Recalculates sizes on window resize
+                },
+            }
+        );
+
+        return () => {
+            pin.kill();
+        };
+    }, []);
     return (
-        <>
-            <div className="content-wrapper-1">
-                <div className="topic-1 hiderx">
-                    <div className="top-to-bottom">Our Esteemed Faculty</div>
-                </div>
-                {facultyData && (
-                    <div className="flist">
-                        <div className="flist-scroller">
-                            {facultyData.map((f, i) => (
-                                <FacultyCard key={i} faculty={f}></FacultyCard>
-                            ))}
-                        </div>
-                        <div className="flist-scroller">
-                            {facultyData.map((f, i) => (
-                                <FacultyCard key={i} faculty={f}></FacultyCard>
-                            ))}
-                        </div>
-                    </div>
-                )}
+        <div className="content-wrapper-1" ref={sectionRef}>
+            <div className="topic-1 hiderx">
+                <div className="top-to-bottom">Our Esteemed Faculty</div>
             </div>
-        </>
+            {facultyData && (
+                <div className="flist">
+                    <div className="flist-scroller" ref={triggerRef}>
+                        {facultyData.map((f, i) => (
+                            <FacultyCard key={i} faculty={f}></FacultyCard>
+                        ))}
+                    </div>
+                    <div className="flist-scroller">
+                        {facultyData.map((f, i) => (
+                            <FacultyCard key={i} faculty={f}></FacultyCard>
+                        ))}
+                    </div>
+                </div>
+            )}
+        </div>
     );
 };
 

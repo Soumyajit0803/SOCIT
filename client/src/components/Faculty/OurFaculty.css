@@ -26,10 +26,10 @@
         overflow: hidden;
         padding: 1rem !important;
         margin-bottom: 2rem;
-        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        /* -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); */
 
         /* Standard property for future support */
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+        /* mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); */
     }
     .flist .flist-scroller {
         display: flex;
