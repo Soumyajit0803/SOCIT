@@ -1,12 +1,10 @@
 .header {
     background: transparent;
-    /* margin: var(--appmargin);; */
     padding: 0.5rem;
     border: 2px solid var(--green);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* position: relative; */
 }
 
 .header .hero {
@@ -21,23 +19,42 @@
     gap: 2rem;
     font-size: 1.2rem;
     margin: 0 2rem;
+    
+    /* CRITICAL: This is needed for the magic line to position itself correctly */
+    position: relative; 
+}
+
+/* The Magic Line styling */
+.nav-indicator {
+    position: absolute;
+    bottom: -5px; /* Adjust distance from text */
+    left: 0;
+    height: 3px;
+    background-color: var(--green);
+    border-radius: 2px;
+    opacity: 0;
+    pointer-events: none;
+    /* No transition here! GSAP handles the movement. */
 }
 
 .menu-item {
     width: min-content;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
+    /* Removed border-bottom so it doesn't double up with the magic line */
     padding-bottom: 2px;
+    
+    /* Keep color transition if you want text color to fade */
+    transition: color 0.3s ease; 
 }
 
+/* Removed .active-menu-item border styles entirely */
+/* The class is still useful if you want to change the TEXT color of the active link */
 .active-menu-item {
-    border-bottom: 2px solid var(--green);
+    /* Example: font-weight: bold; */
 }
 
 .header .drawer-button {
     display: none;
 }
-
 
 @media only screen and (max-width: 720px) {
     .header .menu {
