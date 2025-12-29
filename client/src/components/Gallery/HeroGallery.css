@@ -103,7 +103,7 @@
     }
     .Hero .right .lower .text,
     .Hero .left .upper .text {
-        font-size: min(4vw, 1.4rem);
+        font-size: min(4vw, 1.2rem);
         line-height: 1.2em;
     }
 }

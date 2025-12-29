@@ -3,6 +3,7 @@ import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
 // Assuming FacultyCard, facultyData, FaPhoneAlt, FaEnvelope are available
 
 gsap.registerPlugin(ScrollTrigger);
@@ -165,35 +166,36 @@ const FacultyCard = ({ faculty }) => {
 const OurFaculty = () => {
     const sectionRef = useRef(null);
     const triggerRef = useRef(null);
-    useLayoutEffect(() => {
-        const getScrollAmount = () => {
-            let elementWidth = triggerRef.current.scrollWidth;
-            // Use the container's width instead of window.innerWidth to exclude scrollbar
-            let containerWidth = sectionRef.current.offsetWidth;
+    useGSAP(
+        () => {
+            // Calculate dynamic width
+            const getScrollAmount = () => {
+                let elementWidth = triggerRef.current.scrollWidth;
+                let containerWidth = sectionRef.current.offsetWidth;
+                return -(elementWidth - containerWidth);
+            };
 
-            return -(elementWidth - containerWidth);
-        };
-        const pin = gsap.fromTo(
-            triggerRef.current,
-            { x: 0 },
-            {
-                x: getScrollAmount, // Use the function here for responsiveness
-                ease: "none",
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top top",
-                    end: "3000 top", // Increase this number if you want the scroll to feel slower
-                    scrub: 0.2,
-                    pin: true,
-                    invalidateOnRefresh: true, // IMPORTANT: Recalculates sizes on window resize
-                },
-            }
-        );
+            const tween = gsap.fromTo(
+                triggerRef.current,
+                { x: 0 },
+                {
+                    x: getScrollAmount,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top top",
+                        end: "+=3000", // "3000 top" is invalid syntax for 'end'. Use relative value "+=3000"
+                        scrub: 0.2, // Smooth scrubbing
+                        pin: true,
+                        invalidateOnRefresh: true,
+                    },
+                }
+            );
 
-        return () => {
-            pin.kill();
-        };
-    }, []);
+            // No manual cleanup needed! useGSAP handles revert() automatically.
+        },
+        { scope: sectionRef }
+    );
     return (
         <div className="content-wrapper-1" ref={sectionRef}>
             <div className="topic-1 hiderx">

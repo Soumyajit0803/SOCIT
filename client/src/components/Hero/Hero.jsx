@@ -5,9 +5,8 @@ import "./Hero.css";
 
 gsap.registerPlugin(useGSAP);
 
-function Hero() {
+function Hero({ mainTitle, topLeftText, bottomRightText }) {
     const container = useRef();
-    const titleText = "Society of";
 
     useGSAP(
         () => {
@@ -53,8 +52,7 @@ function Hero() {
                     ease: "power3.inOut", // Smooth "cinematic" movement
                 },
                 "-=0.6"
-            )
-            .from(
+            ).from(
                 ".right",
                 {
                     xPercent: -110, // Start hidden behind middle (move left)
@@ -79,14 +77,18 @@ function Hero() {
                 "-=0.3"
             );
 
-            tl.from(".hero-title-char", {
-                opacity: 0,
-                y: 50, // Comes up from below
-                rotateX: -90, // 3D rotation effect
-                stagger: 0.03, // Speed of typing
-                duration: 0.8,
-                ease: "back.out(1.7)", // Slight overshoot for bounciness
-            }, "<=0.3");
+            tl.from(
+                ".hero-title-char",
+                {
+                    opacity: 0,
+                    y: 50, // Comes up from below
+                    rotateX: -90, // 3D rotation effect
+                    stagger: 0.03, // Speed of typing
+                    duration: 0.8,
+                    ease: "back.out(1.7)", // Slight overshoot for bounciness
+                },
+                "<=0.3"
+            );
         },
         { scope: container }
     );
@@ -99,9 +101,7 @@ function Hero() {
                     <div className="upper">
                         <h1></h1>
                         <div className="text">
-                            <p>
-                                Welcome to the web corner of SOCIT - Society of Information Technology, IIEST Shibpur.
-                            </p>
+                            <p>{topLeftText}</p>
                         </div>
                     </div>
                     <div className="lower"></div>
@@ -113,24 +113,21 @@ function Hero() {
                     <div className="buffer"></div>
 
                     <div className="font">
-                        {/* React logic to split text into spans automatically */}
-                        {titleText.split("").map((char, index) => (
-                            <div key={index} className="hero-title-char">
-                                {char}
-                            </div>
-                        ))}
-                        <br />
-                        {"Information".split("").map((char, index) => (
-                            <div key={index} className="hero-title-char">
-                                {char}
-                            </div>
-                        ))}
-                        <br />
-                        {"Technology".split("").map((char, index) => (
-                            <div key={index} className="hero-title-char">
-                                {char}
-                            </div>
-                        ))}
+                        {mainTitle.map((singleLine, lineIndex) => {
+                            return (
+                                <>
+                                <>
+                                    {singleLine.split("").map((char, index) => (
+                                        <div key={index} className="hero-title-char">
+                                            {char}
+                                        </div>
+                                    ))}
+                                </>
+                                <br />
+                                </>
+                            );
+                        })}
+                        
                     </div>
 
                     <div className="buffer"></div>
@@ -140,11 +137,9 @@ function Hero() {
                 <div className="right">
                     <div className="upper"></div>
                     <div className="lower">
-                        <h1 className="">Highlights</h1>
                         <div className="text">
                             <p>
-                                Top education, AI & cybersecurity research, industry ties, top labs, strong
-                                placements—empowering innovation.
+                                {bottomRightText}
                             </p>
                         </div>
                     </div>

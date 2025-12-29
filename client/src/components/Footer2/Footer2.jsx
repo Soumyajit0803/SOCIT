@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Footer2.css";
 import { Button, Avatar, Tooltip } from "antd";
-import { LinkedinOutlined, GithubOutlined, InstagramOutlined, MailOutlined, SendOutlined } from "@ant-design/icons";
+import { LinkedinOutlined, GithubOutlined, InstagramOutlined, MailOutlined } from "@ant-design/icons";
 import CustomButton from "../CustomButton/CustomButton";
 import FooterAnim from "../FooterAnim/FooterAnim";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ExtLink = ({ link, name }) => (
     <div className="extlink">
@@ -13,8 +18,10 @@ const ExtLink = ({ link, name }) => (
 
 const Socials = () => {
     return (
-        <div style={{ margin: "1rem 0 1rem 0" }}>
+        // Added class 'social-icon' for GSAP targeting
+        <div style={{ margin: "1rem 0 1rem 0" }} className="socials-container">
             <Button
+                className="social-icon"
                 shape="circle"
                 size="large"
                 style={{ margin: "0.2rem" }}
@@ -24,6 +31,7 @@ const Socials = () => {
                 target="blank"
             ></Button>
             <Button
+                className="social-icon"
                 href="https://github.com/Soumyajit0803/SOCIT"
                 rel="noopener noreferrer"
                 target="blank"
@@ -33,6 +41,7 @@ const Socials = () => {
                 icon={<GithubOutlined style={{ fontSize: "1.3rem" }} />}
             ></Button>
             <Button
+                className="social-icon"
                 href="https://www.instagram.com/socit_iiests?igsh=MXIxNXc5NXdoaXlpdA=="
                 rel="noopener noreferrer"
                 target="blank"
@@ -42,6 +51,7 @@ const Socials = () => {
                 icon={<InstagramOutlined style={{ fontSize: "1.3rem" }} />}
             ></Button>
             <Button
+                className="social-icon"
                 href="mailto:hod@it.iiests.ac.in"
                 rel="noopener noreferrer"
                 target="blank"
@@ -64,8 +74,64 @@ const contributors = [
 ];
 
 const Footer2 = () => {
+    const footerRef = useRef(null);
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: footerRef.current,
+                start: "top 90%", // Start slightly earlier so users see movement
+                toggleActions: "play none none reverse",
+            }
+        });
+
+        // 1. Animate the main 3 columns (Left, Mid, Right)
+        // We use a general selector to stagger the main blocks first
+        tl.from(".left, .mid, .right", {
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        // 2. Stagger the Quick Links specifically
+        tl.from(".extlink", {
+            x: -20,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.1,
+            ease: "power2.out"
+        }, "-=0.4"); // Overlap slightly with previous animation
+
+        // 3. Pop in the Developer Avatars
+        tl.from(".contri .ant-avatar", {
+            scale: 0,
+            opacity: 0,
+            duration: 0.4,
+            stagger: 0.05,
+            ease: "back.out(1.7)" // Nice bounce effect
+        }, "-=0.2");
+
+        // 4. Slide up Social Icons
+        tl.from(".social-icon", {
+            y: 20,
+            opacity: 0,
+            duration: 0.4,
+            stagger: 0.1,
+            ease: "back.out(2)"
+        }, "<"); // Run at the same time as avatars
+
+        // 5. Finally, the Copyright text
+        tl.from(".copyright p", {
+            opacity: 0,
+            duration: 1
+        });
+
+    }, { scope: footerRef });
+
     return (
-        <footer className="socit-footer">
+        <footer className="socit-footer" ref={footerRef}>
             <div className="for-mob">
                 <FooterAnim />
                 <CustomButton text="More Info" url={"https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT"} />
@@ -113,7 +179,7 @@ const Footer2 = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        <Avatar size={40} src={`https://github.com/${username}.png`} alt={name} style={{border: "var(--appborder)"}}/>
+                                        <Avatar size={40} src={`https://github.com/${username}.png`} alt={name} style={{ border: "var(--appborder)" }} />
                                     </a>
                                 </Tooltip>
                             ))}
@@ -121,7 +187,7 @@ const Footer2 = () => {
                     </div>
                 </div>
             </div>
-            <div className="copyright">copyright &copy; {new Date().getFullYear()} SOCIT. All rights reserved.</div>
+            <div className="copyright"><p>copyright &copy; {new Date().getFullYear()} SOCIT. All rights reserved.</p></div>
         </footer>
     );
 };

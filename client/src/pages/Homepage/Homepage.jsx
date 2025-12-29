@@ -7,7 +7,7 @@ import Work from "../../components/Our_Works/Work";
 const Homepage = () => {
     return (
         <>
-            <Hero />
+            <Hero mainTitle={["Society of", "Information", "Technology"]} topLeftText="Welcome to the web corner of SOCIT - Society of Information Technology, IIEST Shibpur." bottomRightText="Top education, AI & cybersecurity research, industry ties, top labs, strong placements—empowering innovation." />
             <About />
             <Academics />
             <NumStats />
