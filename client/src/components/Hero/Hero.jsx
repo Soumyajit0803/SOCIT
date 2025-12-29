@@ -86,7 +86,7 @@ function Hero() {
                 stagger: 0.03, // Speed of typing
                 duration: 0.8,
                 ease: "back.out(1.7)", // Slight overshoot for bounciness
-            });
+            }, "<=0.3");
         },
         { scope: container }
     );

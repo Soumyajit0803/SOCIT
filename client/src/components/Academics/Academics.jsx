@@ -1,6 +1,11 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./Academics.css";
 import CustomButton from "../CustomButton/CustomButton";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const semesterLinks = [
     "https://example.com/semester1",
@@ -14,17 +19,42 @@ const semesterLinks = [
 ];
 
 const Academics = () => {
+    const academicsRef = useRef(null);
+
+    useGSAP(
+        () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: academicsRef.current,
+                    start: "top 80%", // Animation starts when top of element
+                },
+            });
+            tl.from(".topic", { opacity: 0, transform: "scaleX(0)", duration: 1, ease: "power2.out" });
+            tl.from(".right", { opacity: 0, transform: "translateY(50%)", duration: 0.7 });
+            tl.from(".left", { opacity: 0, transform: "translateY(50%)", duration: 0.7 }, "<=0.3");
+            tl.from(".img-box", { opacity: 0, duration: 1 });
+            tl.from(".text", { opacity: 0, duration: 1 }, "<");
+            tl.from(".sem-wrap", {
+            opacity: 0,  // Fade in
+            duration: 0.5,   
+            y: 50,   
+            stagger: 0.1, // <--- THE MAGIC SAUCE: 0.1s delay between each item
+            });
+            tl.from(".know-more", { opacity: 0, x: 50, duration: 0.5 });
+        },
+        { scope: academicsRef }
+    );
     return (
-        <div className="academics-wrapper hiderx">
+        <div className="academics-wrapper" ref={academicsRef}>
             <div className="topic">
-                <span className="right-to-left">Academics</span>
+                <span className="">Academics</span>
             </div>
             <div className="content">
                 <div className="left">
                     <div className="img-box"></div>
                 </div>
                 <div className="right">
-                    <p className="right-to-left" style={{ animationDelay: "0.2s" }}>
+                    <p className="text">
                         The Information Technology Department at IIEST, Shibpur offers a well-structured curriculum that
                         blends theoretical foundations with practical applications to prepare students for the
                         ever-evolving tech industry. Our academic programs focus on core computer science principles,
@@ -35,15 +65,15 @@ const Academics = () => {
                         problem-solving, and interdisciplinary learning, ensuring that graduates are well-equipped to
                         tackle real-world challenges.
                     </p>
-                    <div className="semester-links right-to-left" style={{ animationDelay: "0.3s" }}>
+                    <div className="semester-links" style={{ animationDelay: "0.3s" }}>
                         {semesterLinks.map((link, index) => (
-                            <a href={link} target="_blank" rel="noopener noreferrer">
+                            <a className="sem-wrap" href={link} target="_blank" rel="noopener noreferrer">
                                 <div className="sem">Semester {index + 1}</div>
                             </a>
                         ))}
                     </div>
 
-                    <div className="right-to-left" style={{ animationDelay: "0.4s", marginTop: "20px" }}>
+                    <div className="know-more">
                         <CustomButton text="Academic corner" url={"https://www.iiests.ac.in/IIEST/AcaUnitDetails/IT"} />
                     </div>
                 </div>
