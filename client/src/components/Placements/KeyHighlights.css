@@ -1,10 +1,8 @@
 .TitleText{
     text-align: center;
-    font-size: 3rem;
-    font-weight: 500;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     border-bottom: 2px solid #93B256;
+    font-size: 2.5rem;
+    padding: 0.7rem 1rem
 }
 
 .StatsContainer{

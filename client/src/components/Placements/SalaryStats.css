@@ -1,10 +1,7 @@
 .TitleText_SS{
     text-align: left;
-    font-size: 3rem;
-    font-weight: 510;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
+    font-size: 2.5rem;
+    padding: 0.7rem 1rem;
     border: 2px solid #93B256;
 }
 
@@ -20,7 +17,7 @@
 .SalaryStats .SalaryText{
     flex: 1 1 200px;
     padding:1.5rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .SalaryStats .salary-piechart {

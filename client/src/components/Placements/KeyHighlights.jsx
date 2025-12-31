@@ -88,8 +88,8 @@ export default function KeyHighlights(){
                 </div>
             </div>
         </div>
-        <div className="StatsCarousel">
-            <Carousel arrows={true} className="MobileCarousel" infinite autoplay autoplaySpeed={6000} >
+        <div className="StatsCarousel top-to-bottom">
+            <Carousel className="MobileCarousel" infinite autoplay autoplaySpeed={3000} >
                 <div>
                     <div className="Container ll" style={carouselStyle}>
                     <div className="data">
