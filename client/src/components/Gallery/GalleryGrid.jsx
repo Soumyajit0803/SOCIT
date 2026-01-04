@@ -17,30 +17,14 @@ export default function GalleryGrid({ imgArrObj }) {
         let ctx = gsap.context(() => {
             const images = gsap.utils.toArray(".img");
 
-            images.forEach((img) => {
-                // 1. Logic to determine a random side
-                // 0=Left, 1=Right, 2=Top, 3=Bottom
-                const randomSide = Math.floor(Math.random() * 4);
-                
-                let startX = 0;
-                let startY = 0;
-
-                // Adjust the '100' value to control how far away they slide from
-                switch(randomSide) {
-                    case 0: startX = -100; break; // Slide from Left
-                    case 1: startX = 100; break;  // Slide from Right
-                    case 2: startY = -100; break; // Slide from Top
-                    case 3: startY = 100; break;  // Slide from Bottom
-                    default: startX = 100;
-                }
+            images.forEach((img) => {  
 
                 // 2. Animate from that random side to 0 (original position)
                 gsap.fromTo(
                     img,
                     { 
                         opacity: 0, 
-                        x: startX, 
-                        y: startY 
+                        x: gsap.utils.random(-100, 100)  // Random vertical offset
                     },
                     {
                         opacity: 1,
@@ -51,6 +35,7 @@ export default function GalleryGrid({ imgArrObj }) {
                         scrollTrigger: {
                             trigger: img,
                             start: "top 85%", 
+                            scrub: true
                         },
                     }
                 );

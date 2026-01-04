@@ -1,5 +1,11 @@
 import "./SalaryStats.css";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { PieChart, pieArcLabelClasses } from "@mui/x-charts/PieChart";
+import { useRef } from "react";
+gsap.registerPlugin(ScrollTrigger);
+
 const placementStats = [
     { label: "Upto 10 LPA", value: 50, color: "#FFCF50" },
     { label: "10-20 LPA", value: 29.7, color: "#97B067" },
@@ -11,20 +17,38 @@ export default function SalaryStats() {
     const {innerWidth} = window;
     console.log(innerWidth);
     const position = innerWidth > 1000 ? {cx: 500, cy: 0} : {};
+
+    
+    const salaryStatRef = useRef(null);
+
+    useGSAP(
+        () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: salaryStatRef.current,
+                    start: "top 80%", // Animation starts when top of element
+                },
+            });
+            tl.from(".TitleText_SS", { opacity: 0, transform: "scaleX(0)", duration: 1, ease: "power2.out" });
+            tl.from(".SalaryText", { opacity: 0, transform: "translateY(50%)", duration: 0.7 });
+            tl.from(".salary-piechart", { opacity: 0, duration: 1 });
+        },
+        { scope: salaryStatRef }
+    );
     
     return (
-        <>
+        <div ref={salaryStatRef}>
             <div className="TitleText_SS">
-                <div className="left-to-right">Salary Stats</div>
+                <div className="">Salary Stats</div>
             </div>
 
             <div className="SalaryStats">
-                <div className="SalaryText left-to-right" style={{ animationDelay: "0.3s" }}>
+                <div className="SalaryText">
                     Over the years, our students have consistently demonstrated exceptional talent, securing prestigious
                     offers from leading organizations. The salary statistics from 2025 report alongside reflect the dedication, skill, and the
                     institute's commitment to nurturing excellence in every domain of technology and innovation.
                 </div>
-                <div className="salary-piechart right-to-left" style={{ animationDelay: "0.3s" }}>
+                <div className="salary-piechart">
                     <PieChart
                         series={[
                             {
@@ -53,6 +77,6 @@ export default function SalaryStats() {
                     />
                 </div>
             </div>
-        </>
+        </div>
     );
 }

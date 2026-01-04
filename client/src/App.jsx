@@ -11,6 +11,7 @@ import { ConfigProvider, theme } from "antd";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useLocation } from "react-router-dom";
 import SmoothScroll from "./SmoothScroll";
+import Snowfall from "./components/SnowFall/SnowFall";
 
 const darkTheme = createTheme({
     palette: {
@@ -107,6 +108,7 @@ function App() {
                             boxShadow: "inset 0 0 0 2px var(--green)",
                         }}
                     >
+                        <Snowfall />
                         <AppHeader />
                         <AllRoutes />
                         <Footer2 />

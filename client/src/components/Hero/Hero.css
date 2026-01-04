@@ -55,7 +55,7 @@
 
 .Hero .middle .font {
     /* flex: 5; */
-    /* font-size: 4rem; */
+    font-size: 4rem;
     width: 100%;
     text-align: center;
     line-height: 1em;

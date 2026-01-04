@@ -192,14 +192,14 @@ const OurFaculty = () => {
                 }
             );
 
-            // No manual cleanup needed! useGSAP handles revert() automatically.
+            gsap.from(".topic-1", { opacity: 0, transform: "scaleX(0)", duration: 1, ease: "power2.out" });
         },
         { scope: sectionRef }
     );
     return (
         <div className="content-wrapper-1" ref={sectionRef}>
-            <div className="topic-1 hiderx">
-                <div className="top-to-bottom">Our Esteemed Faculty</div>
+            <div className="topic-1">
+                <div className="">Our Esteemed Faculty</div>
             </div>
             {facultyData && (
                 <div className="flist">
@@ -208,11 +208,7 @@ const OurFaculty = () => {
                             <FacultyCard key={i} faculty={f}></FacultyCard>
                         ))}
                     </div>
-                    <div className="flist-scroller">
-                        {facultyData.map((f, i) => (
-                            <FacultyCard key={i} faculty={f}></FacultyCard>
-                        ))}
-                    </div>
+                    
                 </div>
             )}
         </div>

@@ -1,6 +1,12 @@
 import { Card, Tooltip } from "antd";
 import "./RecruitersCmp.css";
 import AutoCarousel from "../AutoCarousel/AutoCarousel";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 const recruiterData = [
     { key: "google", name: "Google" },
     { key: "microsoft", name: "Microsoft" },
@@ -18,31 +24,27 @@ const recruiterData = [
     { key: "natwest", name: "NatWest Group" },
     { key: "jktech", name: "JK Tech" },
     { key: "hcl", name: "HCL Tech" },
-    { key: "tcs", name: "Tata Consultancy Services" }
+    { key: "tcs", name: "Tata Consultancy Services" },
 ];
 export default function RecruitersCmp() {
+    const recruiterRef = useRef(null);
+
+    useGSAP(
+        () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: recruiterRef.current,
+                    start: "top 80%", // Animation starts when top of element
+                },
+            });
+            tl.from(".TitleText", { opacity: 0, transform: "scaleX(0)", duration: 1, ease: "power2.out" });
+        },
+        { scope: recruiterRef }
+    );
     return (
-        <section className="RecruitersCmp">
-            <div className="TitleText top-to-bottom">Our Recruiters</div>
-            {/* <div className="recGrid">
-                {recruiterData.map((company, index) => (
-                    <div className="hiderx" style={{animationDelay:`${0.05*index}s`}} ><Tooltip title={company.name} key={index} placement="top" color="var(--green)">
-                        
-                        <Card
-                            hoverable
-                            className="company-card"
-                            cover={
-                                <img
-                                    alt={company.name}
-                                    src={`../../assets/recruiters/${company.key}.webp`}
-                                    className="company-logo"
-                                />
-                            }
-                        />
-                    </Tooltip></div>
-                ))}
-            </div> */}
-            <AutoCarousel companies={recruiterData} />
+        <section className="RecruitersCmp" ref={recruiterRef}>
+            <div className="TitleText">Our Recruiters</div>
+                <AutoCarousel companies={recruiterData} />
         </section>
     );
 }

@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import "./HeroGallery.css";
+// import "./HeroGallery.css";
 
 const HeroGallery = () => {
     const container = useRef(null);
