@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-const Snowfall = () => {
+const Starfall = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -9,8 +9,8 @@ const Snowfall = () => {
     const ctx = canvas.getContext('2d');
     const particles = [];
     
-    // 1. DENSITY: Lowered the count for a cleaner look
-    const particleCount = 40; 
+    // Low density as requested
+    const particleCount = 20; 
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -25,30 +25,33 @@ const Snowfall = () => {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        // 2. SIZE: Exactly the same (e.g., 2px)
-        radius: 2, 
-        velocity: Math.random() * 0.5 + 0.2, // Subtle movement
+        velocity: Math.random() * 0.4 + 0.2, // Slow, elegant fall
       });
     }
 
     const render = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // 3. COLOR & OPACITY: Fixed color with 50% opacity
-      ctx.fillStyle = "#93b256";
-      ctx.globalAlpha = 0.5; 
+      // 1. Set font properties
+      // Using a fixed size (e.g., 20px) for all stars
+      ctx.font = "20px Arial"; 
+      ctx.fillStyle = "#d1dbbcff";
+      ctx.globalAlpha = 0.7; // 50% opacity
+      ctx.textAlign = "center";
 
       particles.forEach((p) => {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fill();
+        // 2. Draw the asterisk character
+        ctx.fillText("*", p.x, p.y);
 
         // Position update
         p.y += p.velocity;
         
-        // Reset logic
-        if (p.y > canvas.height) {
-          p.y = -10;
+        // Horizontal "drift" to make it feel more natural
+        p.x += Math.sin(p.y / 50) * 0.2;
+
+        // Reset logic (Infinite loop)
+        if (p.y > canvas.height + 20) {
+          p.y = -20;
           p.x = Math.random() * canvas.width;
         }
       });
@@ -76,4 +79,4 @@ const Snowfall = () => {
   );
 };
 
-export default Snowfall;
+export default Starfall;
